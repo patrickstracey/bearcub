@@ -32,3 +32,12 @@ $frontend-theme: mat-light-theme($frontend-primary, $frontend-accent, $frontend-
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.page-grid{
+    display: grid;
+    height: 100%;
+    grid-template-columns: 12% 12% 12% 12% 12% 12% 12% 12%;
+    grid-column-gap: .57%;
+    grid-template-rows: 20vh 20vh 20vh 20vh;
+    grid-row-gap: .57%;
+}
