@@ -13,6 +13,8 @@ import { ClassesComponent } from './settings/classes/classes.component';
 import { OfferingsComponent } from './settings/offerings/offerings.component';
 import { GeneratorComponent } from './payment-plan/generator/generator.component';
 import { LoginComponent } from './auth/login/login.component';
+import { ToolbarComponent } from './navigation/toolbar/toolbar.component';
+import { SidenavListComponent } from './navigation/sidenav-list/sidenav-list.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import { LoginComponent } from './auth/login/login.component';
     ClassesComponent,
     OfferingsComponent,
     GeneratorComponent,
-    LoginComponent
+    LoginComponent,
+    ToolbarComponent,
+    SidenavListComponent
   ],
   imports: [
     BrowserModule,
