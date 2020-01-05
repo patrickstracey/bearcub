@@ -12,6 +12,7 @@ import { BusinessComponent } from './settings/business/business.component';
 import { ClassesComponent } from './settings/classes/classes.component';
 import { OfferingsComponent } from './settings/offerings/offerings.component';
 import { GeneratorComponent } from './payment-plan/generator/generator.component';
+import { LoginComponent } from './auth/login/login.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { GeneratorComponent } from './payment-plan/generator/generator.component
     BusinessComponent,
     ClassesComponent,
     OfferingsComponent,
-    GeneratorComponent
+    GeneratorComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
