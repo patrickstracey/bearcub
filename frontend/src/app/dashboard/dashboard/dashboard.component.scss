@@ -1,10 +1,6 @@
 .page-grid {
-    grid-template-columns: 32% 32% 32%;
-    grid-column-gap: 2%;
-    grid-template-rows: 10vh 10vh 20vh 20vh 20vh;
-
     grid-template-areas: 
-        "subhead subhead subhead"
+        "subhead subhead location"
         "btn-one btn-two btn-three"
         "panel-one panel-two panel-three"
         "panel-one panel-two panel-three"
@@ -13,11 +9,11 @@
 
 .welcome{
     grid-area: subhead;
+}
 
-    h1, h3{
-        margin: unset;
-        font-weight: 400;
-    }
+.location-info {
+    grid-area: location;
+    text-align: right;
 }
 
 button {

@@ -8,11 +8,17 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.scss']
 })
-export class DashboardComponent implements OnInit {
 
+
+
+export class DashboardComponent implements OnInit {
+  today: Date;
+  
   constructor() { }
 
   ngOnInit() {
+    this.today = new Date();
+    console.log(this.today);
   }
 
 }
