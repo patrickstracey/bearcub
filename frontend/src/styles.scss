@@ -34,11 +34,18 @@ $frontend-theme: mat-light-theme($frontend-primary, $frontend-accent, $frontend-
 /* You can add global styles to this file, and also import other style files */
 
 html, body { height: 100%; }
+//body { margin: 0; font-family: 'NTR', sans-serif; }
+//secondary font? font-family: 'Asap', sans-serif;
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
-h1, h3{
-    margin: unset;
+h1, h2, h3, h4 {
+    line-height: 25px;
     font-weight: 400;
+    margin: 5px;
+}
+
+h1, h2 {
+    font-family: 'NTR', sans-serif;
 }
 
 .page-grid{
