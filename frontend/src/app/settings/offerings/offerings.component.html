@@ -1,1 +1,39 @@
-<p>offerings works!</p>
+<div class="page-grid">
+    <h1>Offerings</h1>
+
+    <div id="plan-holder">
+        <mat-card *ngFor="let plan of offerings" class="plan-overview">
+            <div class="header"><h3>{{plan.name}}</h3><button mat-button color="warn">Delete</button></div>
+            <p>Standard Tuition: <span class="subtext">${{plan.tuition}}</span></p>
+            <p>Minimum Due At Drop-off: <span class="subtext">${{plan.minimum}}</span></p>
+        </mat-card>
+    </div>
+
+    <div id="new-offering-panel">
+        <mat-card style="height: 100%;">
+            <h2>Create New Offering</h2>
+            <form>
+                <mat-form-field appearance="standard">
+                    <mat-label>Offering Name</mat-label>
+                    <input matInput placeholder="Ex: 4 Half Days [Pre-K]" type="text" required>
+                    <mat-hint>A descriptive title representing the service for quick reference</mat-hint>
+                </mat-form-field>
+                <mat-form-field appearance="standard">
+                    <mat-label>Standard Tuition Price</mat-label>
+                    <span matPrefix>$ &nbsp;</span>
+                    <input matInput placeholder="Ex: 100.00" type="number" required>
+                    <mat-hint>How much this offering costs when paid upfront</mat-hint>
+                </mat-form-field>
+                <mat-form-field appearance="standard">
+                    <mat-label>Minimum Payment Allowed</mat-label>
+                    <span matPrefix>$ &nbsp;</span>
+                    <input matInput placeholder="Ex: 80.00" type="number">
+                    <mat-hint>Minimum payment you accept (leftover is applied to payment plan)</mat-hint>
+                </mat-form-field>
+                <button mat-flat-button color="primary" type="submit">Submit</button>
+            </form>
+        </mat-card>
+        
+    </div>
+
+</div>
