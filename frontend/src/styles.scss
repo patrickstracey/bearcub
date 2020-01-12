@@ -53,6 +53,14 @@ h1, h2 {
     height: 100%;
     grid-template-columns: 32% 32% 32%;
     grid-column-gap: 2%;
-    grid-template-rows: 10vh 10vh 20vh 20vh 20vh;
+}
+
+.reg-top {
+    grid-template-rows: 10vh 10vh 20vh 20vh 1fr;
     grid-row-gap: .57%;
+}
+
+.sm-top{
+    grid-template-rows: 35px 15vh 20vh 20vh 1fr;
+    grid-row-gap: 20px;
 }
