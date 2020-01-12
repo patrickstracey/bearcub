@@ -1,0 +1,42 @@
+mat-panel-title{
+    min-width: 50%;
+}
+
+mat-icon {
+    color: #757575;
+}
+
+.family-detail-layout {
+    grid-template-areas: 
+        "subhead subhead subhead"
+        "fam-overview snapshot-two snapshot-three"
+        "fam-overview ov-table ov-table"
+        "fam-overview ov-table ov-table"
+        "fam-overview ov-table ov-table";
+}
+
+.header {
+    grid-area: subhead;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#family-details{
+    grid-area: fam-overview;
+    display: flex;
+    flex-direction: column;
+
+    h3{
+        margin: unset;
+    }
+
+    div{
+        margin-bottom: 20px;
+    }
+
+}
+
+#balance-details{
+    grid-area: snapshot-two;
+}
