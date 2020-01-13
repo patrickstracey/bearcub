@@ -2,21 +2,28 @@ mat-panel-title{
     min-width: 50%;
 }
 
-mat-icon {
+mat-icon, .subtext {
     color: #757575;
+}
+
+h3{
+    margin: unset;
 }
 
 .family-detail-layout {
     grid-template-areas: 
         "subhead subhead subhead"
         "fam-overview snapshot-two snapshot-three"
-        "fam-overview ov-table ov-table"
-        "fam-overview ov-table ov-table"
-        "fam-overview ov-table ov-table";
+        "fam-overview payment activity"
+        "fam-overview payment activity"
+        "fam-overview payment activity";
+}
+
+.page-header{
+    grid-area: subhead;
 }
 
 .header {
-    grid-area: subhead;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -27,10 +34,6 @@ mat-icon {
     display: flex;
     flex-direction: column;
 
-    h3{
-        margin: unset;
-    }
-
     div{
         margin-bottom: 20px;
     }
@@ -39,4 +42,16 @@ mat-icon {
 
 #balance-details{
     grid-area: snapshot-two;
+}
+
+#payment-details{
+    grid-area: payment;
+}
+
+#revenue-graph{
+    grid-area: snapshot-three;
+}
+
+#activity-feed{
+    grid-area: activity;
 }
