@@ -14,11 +14,13 @@ export class FamilyDetailComponent implements OnInit {
     {
       name: 'Geoff',
       age: 4,
+      status: 'Graduated',
       note: 'Has a peanut allergy'
     },
     {
       name: 'Samantha',
       age: 3,
+      status: 'Enrolled',
       note: 'Struggles with reading'
     },
   ]

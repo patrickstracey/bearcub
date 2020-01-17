@@ -7,6 +7,7 @@ import { OfferingsComponent } from './settings/offerings/offerings.component';
 import { OverviewComponent } from './customers/overview/overview.component';
 import { GeneratorComponent } from './payment-plan/generator/generator.component';
 import { FamilyDetailComponent } from './customers/family-detail/family-detail.component';
+import { LoginComponent } from './auth/login/login.component';
 
 
 const routes: Routes = [
@@ -17,6 +18,7 @@ const routes: Routes = [
   { path: 'settings/business-info', component: BusinessComponent },
   { path: 'settings/classes', component: ClassesComponent },
   { path: 'settings/offerings', component: OfferingsComponent },
+  { path: 'login', component: LoginComponent },
 ];
 
 @NgModule({
