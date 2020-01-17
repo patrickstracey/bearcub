@@ -1,0 +1,27 @@
+@import '../../../styles.scss';
+
+.login {
+
+    background-color: mat-color($frontend-primary, 200);
+
+
+    mat-card{
+        display: flex;
+        flex-direction: column;
+        width: 40%;
+        margin: 15% auto auto auto;
+        justify-content: center;
+        align-items: center;
+
+        h1{
+            margin-bottom: 30px;
+        }
+
+        mat-form-field{
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        
+
+    }
+}
