@@ -10,12 +10,6 @@
 // Be sure that you only ever include this mixin once!
 @include mat-core();
 
-
-
-// Define the palettes for your theme using the Material Design palettes available in palette.scss
-// (imported above). For each palette, you can optionally specify a default, lighter, and darker
-// hue. Available color palettes: https://material.io/design/color/
-
 //find existing colors in ./frontend/node_modules/@angular/material/_theming.scss
 $frontend-primary: mat-palette($mat-cyan);
 $frontend-accent: mat-palette($mat-purple);
@@ -63,4 +57,10 @@ h1, h2 {
 .sm-top{
     grid-template-rows: 35px 15vh 20vh 20vh 1fr;
     grid-row-gap: 20px;
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
