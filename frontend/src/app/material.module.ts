@@ -12,17 +12,21 @@ import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatChipsModule } from '@angular/material/chips';
 import { MatExpansionModule } from '@angular/material/expansion';
+import { MatSelectModule } from '@angular/material/select';
+import { MatSliderModule } from '@angular/material/slider';
 
 
 @NgModule({
     imports: [ MatSidenavModule, MatToolbarModule, MatButtonModule,
                MatIconModule, MatListModule, MatCardModule,
                MatFormFieldModule, MatInputModule, MatTableModule,
-               MatPaginatorModule, MatChipsModule, MatExpansionModule ],
+               MatPaginatorModule, MatChipsModule, MatExpansionModule,
+               MatSelectModule, MatSliderModule ],
     exports: [ MatSidenavModule, MatToolbarModule, MatButtonModule,
                MatIconModule, MatListModule, MatCardModule,
                MatFormFieldModule, MatInputModule,MatTableModule,
-               MatPaginatorModule, MatChipsModule, MatExpansionModule ]
+               MatPaginatorModule, MatChipsModule, MatExpansionModule,
+               MatSelectModule, MatSliderModule ]
 })
 
 export class MaterialModule {}

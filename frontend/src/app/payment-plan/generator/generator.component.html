@@ -1,0 +1,96 @@
+<div class="page-grid sm-top plan-builder-layout">
+    <div class="page-header header">
+        <h1>Smith Family Payment Plan</h1>
+        <mat-chip-list>
+            <mat-chip color="primary">Actively Enrolled</mat-chip>
+        </mat-chip-list>
+    </div>
+
+    <mat-card id="hl-info">
+        <form class="payment-form">
+            <mat-form-field appearance="legacy">
+                <mat-label>Payment Menthod</mat-label>
+                    <input matInput disabled value="**** **** **** 6053">
+            </mat-form-field>
+          
+            <mat-form-field appearance="legacy">
+                <mat-label>Process Date</mat-label>
+                    <input matInput disabled value="14th of every month">
+            </mat-form-field>
+          </form>
+    </mat-card>
+
+    <mat-card id="plan-projections">
+        <h2 style="margin-bottom: 15px;">Projections</h2>
+        <div class="holder">
+            <div class=item>
+                <p class="subtext">Paid Upfront</p>
+                <h3>$3,600.00</h3>
+            </div>
+            <div class=item>
+                <p class="subtext">Paid Upfront</p>
+                <h3>$3,600.00</h3>
+            </div>
+            <div class=item>
+                <p class="subtext">Paid Upfront</p>
+                <h3>$3,600.00</h3>
+            </div>
+            <div class=item>
+                <p class="subtext">Paid Upfront</p>
+                <h3>$3,600.00</h3>
+            </div>
+        </div>
+        
+    </mat-card>
+
+    <mat-card id="inputs-panel">
+        <div class="plan-inputs">
+            <span class="subtext">Outstanding Balance Markup - 65%</span>
+            <mat-slider
+                max=200
+                min=0
+                step=1
+                thumbLabel=true
+                tickInterval=10
+                value=65
+                style="margin-top: 15px;">
+            </mat-slider>
+            <mat-form-field>
+                <mat-label>Plan Repayment Amount</mat-label>
+                <span matPrefix>$ &nbsp;</span>
+                <input matInput placeholder="Ex: 100.00" type="number">
+                <mat-hint>Amount paid per month after graduation</mat-hint>
+            </mat-form-field>
+        </div>
+        
+        <div class="mapper">
+            <h2>Projection Mapper</h2>
+            <form class="projection-form">
+                <mat-form-field>
+                    <mat-label>Service Used</mat-label>
+                    <mat-select [(value)]="selected">
+                        <mat-option value="5DF">5 Day Full-time</mat-option>
+                        <mat-option value="4DF">4 Day Full-time</mat-option>
+                        <mat-option value="3DF">3 Day Full-time</mat-option>
+                        <mat-option value="2DF">2 Day Full-time</mat-option>
+                    </mat-select>
+                </mat-form-field>
+                <mat-form-field>
+                    <mat-label>Avg. Service Payment</mat-label>
+                    <span matPrefix>$ &nbsp;</span>
+                    <input matInput placeholder="Ex: 100.00" type="number">
+                    <mat-hint>Amount paid per Week</mat-hint>
+                </mat-form-field>
+        </form>
+
+        </div>
+        
+
+    </mat-card>
+
+    <mat-card id="chart-panel">
+
+    </mat-card>
+
+
+</div>
