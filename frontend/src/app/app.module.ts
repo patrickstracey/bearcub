@@ -15,6 +15,7 @@ import { GeneratorComponent } from './payment-plan/generator/generator.component
 import { LoginComponent } from './auth/login/login.component';
 import { ToolbarComponent } from './navigation/toolbar/toolbar.component';
 import { SidenavListComponent } from './navigation/sidenav-list/sidenav-list.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { SidenavListComponent } from './navigation/sidenav-list/sidenav-list.com
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MaterialModule
+    MaterialModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
