@@ -45,7 +45,7 @@
             </div>
             <div class=item>
                 <p class="subtext">Repayment Timeline</p>
-                <h3>{{projection.repaymentTimeline | number:'1.0-0'}} months</h3>
+                <h3>{{projection.repaymentTimeline | number:'1.0-0'}} {{projection.repaymentTimeline ? 'months' : ''}}</h3>
             </div>
         </div>
         
@@ -100,7 +100,7 @@
     </mat-card>
 
     <mat-card id="chart-panel">
-
+        <app-plan-chart></app-plan-chart>
     </mat-card>
 
 

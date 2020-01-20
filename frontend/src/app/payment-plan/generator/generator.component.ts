@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { PlanDataModel } from 'src/app/_models/plan-data.model';
+import { ChartProjectionService } from 'src/app/_services/projection-chart.service';
 
 
 //For building out and assigning payment plans to a family
@@ -47,10 +49,11 @@ export class GeneratorComponent implements OnInit {
   };
   
 
-  constructor() { 
+  constructor(public chartBuilderService: ChartProjectionService) { 
   }
   
   ngOnInit() {
+
   }
 
   calculateProjections(){
@@ -62,7 +65,14 @@ export class GeneratorComponent implements OnInit {
     this.projection.renvenueIncreasePercentage = (this.projection.revenueIncrease/this.projection.owedUpfront);
     this.projection.repaymentTimeline = this.projection.owedWithInterest/this.repaymentAmount;
 
-    console.log(this.projection);
+    const chartInputs: PlanDataModel = new PlanDataModel(
+    this.timesUsed, 
+    this.projection.repaymentTimeline,
+    this.selectedService.amount,
+    this.avgUpfrontAmount,
+    this.repaymentAmount);
+
+    this.chartBuilderService.generateData(chartInputs);
   }
 
 }
