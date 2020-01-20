@@ -28,19 +28,20 @@ export class ChartProjectionService{
 
     emitBuildData() {
         this.projectionDataBuilt.next(this.buildReadyData);
-        console.log("emitting");
-        console.log(this.buildReadyData);
     }
 
     private timelineLabels(enrollmentLength: number){
         let returnedLabels: string[] = [];
         let lblCount: number;
-        for (lblCount = 0; lblCount < this.totalTimeline; lblCount++) {
+        for (lblCount = 0; lblCount < this.totalTimeline;) {
             if (lblCount < enrollmentLength){
-                returnedLabels.push('Active');
+                returnedLabels.push('*');
+                enrollmentLength - lblCount >= 4 ? lblCount +=4 : lblCount += (enrollmentLength - lblCount);
             }
             else{
-                returnedLabels.push('Plan');
+                let monthCount = (this.totalTimeline - lblCount).toString();
+                returnedLabels.push(monthCount);
+                lblCount ++;
             }
         }
         return returnedLabels;
@@ -51,12 +52,20 @@ export class ChartProjectionService{
         let previousPayment: number = 0;
         let payment: number;
 
-        for(payment = 0; payment < this.totalTimeline; payment++ ){
+        for(payment = 0; payment < this.totalTimeline;){
             if (payment < enrollmentLength){
-                revenue.push(previousPayment += avgPayment);
+                if ((enrollmentLength - payment)>= 4){
+                    revenue.push(previousPayment += (avgPayment*4));
+                }
+                else{
+                    revenue.push(previousPayment += (avgPayment* (enrollmentLength - payment)));
+                }
+                enrollmentLength - payment >= 4 ? payment +=4 : payment += (enrollmentLength - payment);
             }
             else{
+                //this will overpay on plans that arent evenly spread out
                 revenue.push(previousPayment += planPayment);
+                payment ++;
             }
         }
         return revenue;
@@ -67,12 +76,19 @@ export class ChartProjectionService{
         let previousPayment: number = 0;
         let payment: number;
 
-        for(payment = 0; payment < this.totalTimeline; payment++ ){
+        for(payment = 0; payment < this.totalTimeline;){
             if (payment < enrollmentLength){
-                baseRevenue.push(previousPayment += tuition) 
+                if ((enrollmentLength - payment)>= 4){
+                    baseRevenue.push(previousPayment += (tuition*4));
+                }
+                else{
+                    baseRevenue.push(previousPayment += (tuition* (enrollmentLength-payment)));
+                }
+                enrollmentLength - payment >= 4 ? payment +=4 : payment += (enrollmentLength - payment);
             }
             else{
                 baseRevenue.push(previousPayment)
+                payment ++;
             }
         }
         return baseRevenue;

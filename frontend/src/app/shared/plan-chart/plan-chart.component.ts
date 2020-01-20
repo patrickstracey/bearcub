@@ -37,33 +37,18 @@ export class PlanChartComponent implements OnInit, OnDestroy {
   }
 
   buildChart(data: BuildChartModel){
-    console.log("I heard it!");
-    this.chartDisplayData = data;
-    this.chartDisplayData.chartLabels.length == 0 ? this.displayChart = false : this.displayChart = true;
+    this.data = {};
+    this.data.labels = data.chartLabels;
+    this.data.series = [data.baselineCostData, data.revenueData]
+    this.displayChart = true; 
   }
 
   type: ChartType = 'Line';
   data: IChartistData = {
     labels: this.chartDisplayData.chartLabels,
-    /* [
-      'Jan',
-      'Feb',
-      'Mar',
-      'Apr',
-      'May',
-      'Jun',
-      'Jul',
-      'Aug',
-      'Sep',
-      'Oct',
-      'Nov',
-      'Dec'
-    ] ,*/
     series: [
       this.chartDisplayData.baselineCostData,
       this.chartDisplayData.revenueData
-      /* [5, 4, 3, 7, 5, 10, 3, 4, 8, 10, 6, 8],
-      [3, 2, 9, 5, 4, 6, 4, 6, 7, 8, 7, 4] */
     ]
   };
 
@@ -71,7 +56,8 @@ export class PlanChartComponent implements OnInit, OnDestroy {
     axisX: {
       showGrid: false
     },
-    height: 500
+    height: 500,
+    showArea: true
   };
 
   events: ChartEvent = {
@@ -88,9 +74,5 @@ export class PlanChartComponent implements OnInit, OnDestroy {
       }
     }
   };
-
-}
-
-class LineChart{
 
 }

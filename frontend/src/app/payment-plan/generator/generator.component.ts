@@ -63,7 +63,7 @@ export class GeneratorComponent implements OnInit {
     this.projection.owedWithInterest = (this.projection.owedUpfront - this.projection.paidUpfront) * (1 + (this.markupPercentage/100));
     this.projection.revenueIncrease = this.projection.owedWithInterest - (this.projection.owedUpfront - this.projection.paidUpfront);
     this.projection.renvenueIncreasePercentage = (this.projection.revenueIncrease/this.projection.owedUpfront);
-    this.projection.repaymentTimeline = this.projection.owedWithInterest/this.repaymentAmount;
+    this.projection.repaymentTimeline = Math.ceil(this.projection.owedWithInterest/this.repaymentAmount);
 
     const chartInputs: PlanDataModel = new PlanDataModel(
     this.timesUsed, 
@@ -72,6 +72,7 @@ export class GeneratorComponent implements OnInit {
     this.avgUpfrontAmount,
     this.repaymentAmount);
 
+    console.log(chartInputs);
     this.chartBuilderService.generateData(chartInputs);
   }
 
