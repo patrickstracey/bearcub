@@ -64,3 +64,21 @@ h1, h2 {
     flex-direction: row;
     justify-content: space-between;
 }
+
+.ct-series-a{
+    .ct-area{
+        fill:mat-color($mat-grey, 600);
+    }
+    .ct-line, .ct-point{
+        stroke:mat-color($mat-grey, 200);
+    }  
+} 
+
+.ct-series-b{
+    .ct-area{
+        fill:mat-color($frontend-primary, 600);
+    }
+    .ct-line, .ct-point{
+        stroke:mat-color($frontend-primary, 600);
+    }  
+} 

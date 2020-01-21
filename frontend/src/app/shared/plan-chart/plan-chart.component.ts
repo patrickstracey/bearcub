@@ -57,7 +57,8 @@ export class PlanChartComponent implements OnInit, OnDestroy {
       showGrid: false
     },
     height: 500,
-    showArea: true
+    showArea: true,
+    showPoint: false
   };
 
   events: ChartEvent = {

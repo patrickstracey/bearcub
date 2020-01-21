@@ -33,14 +33,34 @@ export class ChartProjectionService{
     private timelineLabels(enrollmentLength: number){
         let returnedLabels: string[] = [];
         let lblCount: number;
+        let timeIntervals: number = 5;
+
+        if(this.totalTimeline > 10000){
+            timeIntervals = 1000;
+        }
+        else if(this.totalTimeline > 1000){
+            timeIntervals = 100;
+        }
+        else if(this.totalTimeline > 100){
+            timeIntervals = 10;
+        }
+
+
+
         for (lblCount = 0; lblCount < this.totalTimeline;) {
             if (lblCount < enrollmentLength){
                 returnedLabels.push('*');
                 enrollmentLength - lblCount >= 4 ? lblCount +=4 : lblCount += (enrollmentLength - lblCount);
             }
             else{
-                let monthCount = (this.totalTimeline - lblCount).toString();
-                returnedLabels.push(monthCount);
+                let monthCount = (this.totalTimeline - lblCount);
+                if (monthCount % timeIntervals == 0){
+                    returnedLabels.push(monthCount.toString());
+                }
+                else{
+                    returnedLabels.push("");
+                }
+                
                 lblCount ++;
             }
         }
