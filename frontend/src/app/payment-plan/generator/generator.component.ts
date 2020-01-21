@@ -13,6 +13,7 @@ interface serviceTemplate {
 interface Projection {
   owedUpfront: number;
   paidUpfront: number;
+  totalOwed: number;
   owedWithInterest: number;
   revenueIncrease: number;
   renvenueIncreasePercentage: number;
@@ -42,6 +43,7 @@ export class GeneratorComponent implements OnInit {
   projection: Projection = {
     owedUpfront: null,
     paidUpfront: null,
+    totalOwed: null,
     owedWithInterest: null,
     revenueIncrease: null,
     renvenueIncreasePercentage: null,
@@ -61,6 +63,7 @@ export class GeneratorComponent implements OnInit {
     this.projection.owedUpfront = this.selectedService.amount * this.timesUsed;
     this.projection.paidUpfront =  this.avgUpfrontAmount * this.timesUsed;
     this.projection.owedWithInterest = (this.projection.owedUpfront - this.projection.paidUpfront) * (1 + (this.markupPercentage/100));
+    this.projection.totalOwed = this.projection.paidUpfront + this.projection.owedWithInterest;
     this.projection.revenueIncrease = this.projection.owedWithInterest - (this.projection.owedUpfront - this.projection.paidUpfront);
     this.projection.renvenueIncreasePercentage = (this.projection.revenueIncrease/this.projection.owedUpfront);
     this.projection.repaymentTimeline = Math.ceil(this.projection.owedWithInterest/this.repaymentAmount);
@@ -72,7 +75,6 @@ export class GeneratorComponent implements OnInit {
     this.avgUpfrontAmount,
     this.repaymentAmount);
 
-    console.log(chartInputs);
     this.chartBuilderService.generateData(chartInputs);
   }
 
