@@ -8,6 +8,7 @@ import { ChartProjectionService } from 'src/app/_services/projection-chart.servi
 interface serviceTemplate {
   name: string;
   amount: number;
+  period: string;
 }
 
 interface Projection {
@@ -28,15 +29,15 @@ interface Projection {
 export class GeneratorComponent implements OnInit {
 
   markupPercentage: number = 65;
-  repaymentAmount: number = 150;
+  repaymentAmount: number = 350;
   avgUpfrontAmount: number = 200;
   timesUsed: number = 10;
   services : serviceTemplate[] = [
-    {name: "5 Day Full-time", amount: 350},
-    {name: "4 Day Full-time", amount: 300},
-    {name: "3 Day Full-time", amount: 250},
-    {name: "2 Day Full-time", amount: 200},
-    {name: "1 Day Full-time", amount: 150}
+    {name: "5 Day Full-time", amount: 350, period: 'Week'},
+    {name: "4 Day Full-time", amount: 300, period: 'Week'},
+    {name: "3 Day Full-time", amount: 250, period: 'Week'},
+    {name: "2 Day Full-time", amount: 200, period: 'Week'},
+    {name: "1 Day Full-time", amount: 150, period: 'Week'}
   ];
   selectedService: serviceTemplate = this.services[0];
 //--//

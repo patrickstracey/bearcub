@@ -1,6 +1,6 @@
 <div class="page-grid sm-top plan-builder-layout">
     <div class="page-header header">
-        <h1>Smith Family Payment Plan</h1>
+        <h1>Build New Payment Plan</h1>
         <mat-chip-list>
             <mat-chip color="primary">Actively Enrolled</mat-chip>
         </mat-chip-list>
@@ -81,14 +81,14 @@
                 <mat-form-field>
                     <mat-label>Service Used</mat-label>
                     <mat-select [(ngModel)]="selectedService">
-                        <mat-option *ngFor="let service of services" [value]="service">{{service.name}}</mat-option>
+                        <mat-option *ngFor="let service of services" [value]="service">{{service.name}} ({{service.amount | currency:'USD'}})</mat-option>
                     </mat-select>
                 </mat-form-field>
                 <mat-form-field>
                     <mat-label>Avg. Service Payment</mat-label>
                     <span matPrefix>$ &nbsp;</span>
                     <input matInput placeholder="Ex: 100.00" type="number" [(ngModel)]="avgUpfrontAmount">
-                    <mat-hint>Amount paid per Week</mat-hint>
+                    <mat-hint>Amount paid per {{selectedService?.period}}</mat-hint>
                 </mat-form-field>
                 <mat-form-field>
                     <mat-label>Times Used</mat-label>
