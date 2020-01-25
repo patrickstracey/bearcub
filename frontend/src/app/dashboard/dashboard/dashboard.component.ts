@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { BaseModalService } from 'src/app/_services/base-modal.service';
+import { BaseModalFieldsModel } from 'src/app/_models/base-modal-fields.model';
+import { DashboardForms } from './dashboard.forms'
 
 
 //Serves as the home dashboard for all clients
@@ -9,16 +12,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./dashboard.component.scss']
 })
 
-
-
 export class DashboardComponent implements OnInit {
   today: Date;
+  dashboardForms = DashboardForms;
   
-  constructor() { }
+  constructor(private modalBuilder: BaseModalService) { }
 
   ngOnInit() {
     this.today = new Date();
-    console.log(this.today);
+  }
+
+  openDialog(form: BaseModalFieldsModel){
+    this.modalBuilder.openBottomSheet(form);
   }
 
 }

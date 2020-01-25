@@ -8,9 +8,9 @@
         <h3>(775) 555-0136</h3>
     </div>
 
-    <button mat-flat-button color="accent" id="b1">Check-in Student</button>
-    <button mat-flat-button color="accent" id="b2">Enroll New Student</button>
-    <button mat-flat-button color="accent" id="b3">Process Payment</button>
+    <button mat-flat-button color="accent" id="b1" (click)="openDialog(dashboardForms.CHECKIN)">Check-in Student</button>
+    <button mat-flat-button color="accent" id="b2" (click)="openDialog(dashboardForms.ENROLLMENT)">Enroll New Student</button>
+    <button mat-flat-button color="accent" id="b3" (click)="openDialog(dashboardForms.PAYMENT)">Process Payment</button>
     <mat-card id="p1"></mat-card>
     <mat-card id="p2"></mat-card>
     <mat-card id="p3"></mat-card>
