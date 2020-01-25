@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material.module';
+import { ChartistModule } from 'ng-chartist';
 import { DashboardComponent } from './dashboard/dashboard/dashboard.component';
 import { OverviewComponent } from './customers/overview/overview.component';
 import { FamilyDetailComponent } from './customers/family-detail/family-detail.component';
@@ -16,6 +17,8 @@ import { LoginComponent } from './auth/login/login.component';
 import { ToolbarComponent } from './navigation/toolbar/toolbar.component';
 import { SidenavListComponent } from './navigation/sidenav-list/sidenav-list.component';
 import { FormsModule } from '@angular/forms';
+import { PlanChartComponent } from './shared/plan-chart/plan-chart.component';
+import { BasemodalComponent } from './shared/modal/basemodal/basemodal.component';
 
 @NgModule({
   declarations: [
@@ -29,15 +32,19 @@ import { FormsModule } from '@angular/forms';
     GeneratorComponent,
     LoginComponent,
     ToolbarComponent,
-    SidenavListComponent
+    SidenavListComponent,
+    PlanChartComponent,
+    BasemodalComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModule,
-    FormsModule
+    FormsModule,
+    ChartistModule
   ],
+  entryComponents: [BasemodalComponent],
   providers: [],
   bootstrap: [AppComponent]
 })

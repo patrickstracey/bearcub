@@ -1,0 +1,12 @@
+<x-chartist
+      [type]="type"
+      [data]="data"
+      [options]="options"
+      [events]="events"
+      *ngIf="displayChart"
+    >
+</x-chartist>
+
+<div *ngIf="!displayChart">
+    <p>No projection data to display.</p>
+</div>
