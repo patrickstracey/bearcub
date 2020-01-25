@@ -14,6 +14,7 @@ import { MatChipsModule } from '@angular/material/chips';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatSelectModule } from '@angular/material/select';
 import { MatSliderModule } from '@angular/material/slider';
+import { MatBottomSheetModule } from '@angular/material/bottom-sheet';
 
 
 @NgModule({
@@ -21,12 +22,12 @@ import { MatSliderModule } from '@angular/material/slider';
                MatIconModule, MatListModule, MatCardModule,
                MatFormFieldModule, MatInputModule, MatTableModule,
                MatPaginatorModule, MatChipsModule, MatExpansionModule,
-               MatSelectModule, MatSliderModule ],
+               MatSelectModule, MatSliderModule, MatBottomSheetModule ],
     exports: [ MatSidenavModule, MatToolbarModule, MatButtonModule,
                MatIconModule, MatListModule, MatCardModule,
                MatFormFieldModule, MatInputModule,MatTableModule,
                MatPaginatorModule, MatChipsModule, MatExpansionModule,
-               MatSelectModule, MatSliderModule ]
+               MatSelectModule, MatSliderModule, MatBottomSheetModule ]
 })
 
 export class MaterialModule {}

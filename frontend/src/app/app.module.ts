@@ -18,6 +18,7 @@ import { ToolbarComponent } from './navigation/toolbar/toolbar.component';
 import { SidenavListComponent } from './navigation/sidenav-list/sidenav-list.component';
 import { FormsModule } from '@angular/forms';
 import { PlanChartComponent } from './shared/plan-chart/plan-chart.component';
+import { BasemodalComponent } from './shared/modal/basemodal/basemodal.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { PlanChartComponent } from './shared/plan-chart/plan-chart.component';
     LoginComponent,
     ToolbarComponent,
     SidenavListComponent,
-    PlanChartComponent
+    PlanChartComponent,
+    BasemodalComponent
   ],
   imports: [
     BrowserModule,
@@ -42,6 +44,7 @@ import { PlanChartComponent } from './shared/plan-chart/plan-chart.component';
     FormsModule,
     ChartistModule
   ],
+  entryComponents: [BasemodalComponent],
   providers: [],
   bootstrap: [AppComponent]
 })
