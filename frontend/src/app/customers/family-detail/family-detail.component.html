@@ -1,1 +1,104 @@
-<p>family-detail works!</p>
+<div class="page-grid sm-top family-detail-layout">
+    <div class="page-header header">
+        <h1>The Smith Family</h1>
+        <mat-chip-list>
+            <mat-chip color="primary">Payment Plan Active</mat-chip>
+        </mat-chip-list>
+    </div>
+    
+
+    <mat-card id="family-details">
+        <div class="contact">
+            <div class="header"><h3>Contact Info</h3><button mat-button color="primary">Add</button></div>
+            <p>(775) 555-0132 jenn.smith@gmail.com</p>
+            <p>(775) 555-0189 ksmith@gmail.com</p>
+        </div>
+        <div class="Address">
+            <div class="header"><h3>Address</h3><button mat-button color="primary">Add</button></div>
+            <p>504 West Wallaby Lane</p>
+            <p>Reno, NV 89503</p>
+        </div>
+        <div class="payment-methods">
+            <div class="header"><h3>Payment Methods</h3><button mat-button color="primary">Add</button></div>
+            <div class="payment">
+                <p><mat-icon>credit_card</mat-icon> **** **** **** 6053</p>
+                <p class="subtext">Jennifer Smith - Credit/Debit</p>
+            </div>
+            <div class="payment">
+                <p><mat-icon>account_balance</mat-icon> ************ 4001</p>
+                <p class="subtext">Jennifer Smith - <span>ACH</span></p>
+            </div>
+            <div class="payment">
+                <p><mat-icon>credit_card</mat-icon> **** **** **** 3922</p>
+                <p class="subtext">Kevin Smith - <span>Credit/Debit</span></p>
+            </div>
+        </div>
+    </mat-card>
+
+
+    <mat-card id="student-breakdown">
+        <div class="students">
+            <div class="header"><h3>Students</h3> <button mat-button color="primary">Add</button></div>
+            <mat-accordion>
+                <mat-expansion-panel *ngFor="let student of students">
+                  <mat-expansion-panel-header>
+                    <mat-panel-title>
+                        <mat-icon>person</mat-icon> {{student.name}}
+                    </mat-panel-title>
+                    <mat-panel-description>
+                        Age: {{student.age}}
+                    </mat-panel-description>
+                    <mat-panel-description>
+                        {{student.status}}
+                    </mat-panel-description>
+                  </mat-expansion-panel-header>
+                  <p>{{student.note}}</p>
+                </mat-expansion-panel>
+            </mat-accordion>
+        </div>
+        <div class="header"><h3>Recent Activity</h3></div>
+    </mat-card>
+
+
+    <mat-card id="revenue-graph">
+        <div class="header"><h3>Family Payment Schedule</h3><button mat-button color="primary" [routerLink]="['/plans']" routerLinkActive="router-link-active" >Edit</button></div>
+            <span class="header"><h1>$284.00</h1><p class="subtext"> /per month</p></span>
+            <p class="subtext">Auto-processed on the 14th</p>
+    </mat-card>
+    <mat-card id="payment-plans">
+        <div>
+            <div class="header"><h3>Current Balances</h3></div>
+            <div class="header">
+                <button mat-flat-button color="primary">Send Invoice</button>
+                <button mat-flat-button color="accent">Process Payment</button>
+                <button mat-flat-button color="warn">Adjust Balance</button>
+            </div>
+            <div class="payment-stats">
+                <div>
+                    <p>Total Outstanding</p>
+                    <h1>$533.00</h1>
+                </div>
+                <div>
+                    <p>Paid to Date</p>
+                    <h1>$3,778.00</h1>
+                </div>
+                <div>
+                    <p>Base Owed</p>
+                    <h1>$3,200.00</h1>
+                </div>
+                <div>
+                    <p>Total Plan Owed</p>
+                    <h1>$4,311.00</h1>
+                </div>
+                <div>
+                    <p>Plan Revenue Increase</p>
+                    <h1>$1,111.00 <span class="percentage">(+34%)</span></h1>
+                </div>
+            </div>
+            
+        </div>
+    </mat-card>
+
+
+
+</div>

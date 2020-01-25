@@ -10,6 +10,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FamilyDetailComponent implements OnInit {
 
+  private students = [
+    {
+      name: 'Geoff',
+      age: 4,
+      status: 'Graduated',
+      note: 'Has a peanut allergy'
+    },
+    {
+      name: 'Samantha',
+      age: 3,
+      status: 'Enrolled',
+      note: 'Struggles with reading'
+    },
+  ]
+
   constructor() { }
 
   ngOnInit() {

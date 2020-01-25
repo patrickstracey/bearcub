@@ -1,0 +1,46 @@
+.page-grid {
+    grid-template-areas: 
+        "subhead subhead location"
+        "btn-one btn-two btn-three"
+        "panel-one panel-two panel-three"
+        "panel-one panel-two panel-three"
+        "panel-one panel-two panel-three";
+}
+
+.welcome{
+    grid-area: subhead;
+}
+
+.location-info {
+    grid-area: location;
+    text-align: right;
+}
+
+button {
+    font-size: 2rem;
+    border-radius: 20px 20px 0px 0px;
+}
+
+#b1 {
+    grid-area: btn-one;
+}
+
+#b2 {
+    grid-area: btn-two;
+}
+
+#b3 {
+    grid-area: btn-three;
+}
+
+#p1 {
+    grid-area: panel-one;
+}
+
+#p2 {
+    grid-area: panel-two;
+}
+
+#p3 {
+    grid-area: panel-three;
+}

@@ -1,1 +1,110 @@
-<p>generator works!</p>
+<div class="page-grid sm-top plan-builder-layout">
+    <div class="page-header header">
+        <h1>Build New Payment Plan</h1>
+        <mat-chip-list>
+            <mat-chip color="primary">Actively Enrolled</mat-chip>
+        </mat-chip-list>
+    </div>
+
+    <mat-card id="hl-info">
+        <form class="payment-form">
+            <mat-form-field appearance="legacy">
+                <mat-label>Payment Menthod</mat-label>
+                    <input matInput disabled value="**** **** **** 6053">
+            </mat-form-field>
+          
+            <mat-form-field appearance="legacy">
+                <mat-label>Process Date</mat-label>
+                    <input matInput disabled value="14th of every month">
+            </mat-form-field>
+          </form>
+    </mat-card>
+
+    <mat-card id="plan-projections">
+        <h2 style="margin-bottom: 15px;" class="header">Projections</h2>
+        <div class="holder">
+            <div class=item>
+                <p class="subtext">Revenue Owed</p>
+                <h3>{{projection.owedUpfront | currency:'USD'}}</h3>
+            </div>
+            <div class=item>
+                <p class="subtext">Paid Upfront</p>
+                <h3>{{projection.paidUpfront | currency:'USD'}}</h3>
+            </div>
+            <div class=item>
+                <p class="subtext">Paid via Plan</p>
+                <h3>{{projection.owedWithInterest | currency:'USD'}}</h3>
+            </div>
+            <div class=item>
+                <p class="subtext">Total Paid</p>
+                <h3>{{projection.totalOwed | currency:'USD'}}</h3>
+            </div>
+            <div class=item>
+                <p class="subtext">Revenue Increase ($)</p>
+                <h3>{{projection.revenueIncrease | currency:'USD'}}</h3>
+            </div>
+            <div class=item>
+                <p class="subtext">Revenue Increase (%)</p>
+                <h3>{{projection.renvenueIncreasePercentage | percent: '1.1-1'}}</h3>
+            </div>
+            <div class=item>
+                <p class="subtext">Repayment Timeline</p>
+                <h3>{{projection.repaymentTimeline | number:'1.0-0'}} {{projection.repaymentTimeline ? 'months' : ''}}</h3>
+            </div>
+        </div>
+        
+    </mat-card>
+
+    <mat-card id="inputs-panel">
+        <div class="plan-inputs">
+            <span class="subtext">Outstanding Balance Markup - {{ markupPercentage }}%</span>
+            <mat-slider
+                max=200
+                min=0
+                step=1
+                thumbLabel=true
+                tickInterval=10
+                [(ngModel)]= "markupPercentage"
+                style="margin-top: 15px;">
+            </mat-slider>
+            <mat-form-field>
+                <mat-label>Plan Repayment Amount (monthly)</mat-label>
+                <span matPrefix>$ &nbsp;</span>
+                <input matInput placeholder="Ex: 100.00" type="number" [(ngModel)]="repaymentAmount">
+                <mat-hint>Amount paid per month after graduation</mat-hint>
+            </mat-form-field>
+        </div>
+        
+        <div class="mapper">
+            <h2 class="header">Projection Mapper<button mat-button color="accent" (click)="calculateProjections()">Calculate</button></h2>
+            <div class="projection-form">
+                <mat-form-field>
+                    <mat-label>Service Used</mat-label>
+                    <mat-select [(ngModel)]="selectedService">
+                        <mat-option *ngFor="let service of services" [value]="service">{{service.name}} ({{service.amount | currency:'USD'}})</mat-option>
+                    </mat-select>
+                </mat-form-field>
+                <mat-form-field>
+                    <mat-label>Avg. Service Payment</mat-label>
+                    <span matPrefix>$ &nbsp;</span>
+                    <input matInput placeholder="Ex: 100.00" type="number" [(ngModel)]="avgUpfrontAmount">
+                    <mat-hint>Amount paid per {{selectedService?.period}}</mat-hint>
+                </mat-form-field>
+                <mat-form-field>
+                    <mat-label>Times Used</mat-label>
+                    <input matInput placeholder="Ex: 20" type="number" [(ngModel)]="timesUsed">
+                    <mat-hint>Number of time the chosen service is used.</mat-hint>
+                </mat-form-field>
+            </div>
+
+        </div>
+        
+
+    </mat-card>
+
+    <mat-card id="chart-panel">
+        <app-plan-chart></app-plan-chart>
+    </mat-card>
+
+
+</div>

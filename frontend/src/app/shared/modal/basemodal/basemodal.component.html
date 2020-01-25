@@ -1,0 +1,12 @@
+<h2>{{data.title}}</h2>
+<div>
+    <form>
+        <mat-form-field *ngFor="let field of data.fields" appearance="standard">
+            <mat-label>{{ field.name }}</mat-label>
+            <input matInput placeholder={{field.placeholder}} type={{field.input_type}}>
+            <mat-hint *ngIf="field.hint">{{ field.hint }}</mat-hint>
+        </mat-form-field>
+        <button mat-flat-button color="accent" type="submit">{{ data.button_text }}</button>
+    </form>
+</div>
+

@@ -1,0 +1,95 @@
+@import '../../../styles.scss';
+
+
+mat-panel-title{
+    min-width: 50%;
+}
+
+mat-icon, .subtext {
+    color: #757575;
+}
+
+h3{
+    margin: unset;
+    //color:mat-color($frontend-accent, 600);
+    
+}
+
+.family-detail-layout {
+    grid-template-areas: 
+        "subhead subhead subhead"
+        "fam-overview student snapshot-three"
+        "fam-overview student payment"
+        "fam-overview student payment"
+        "fam-overview student payment";
+}
+
+.page-header{
+    grid-area: subhead;
+}
+
+.students{
+    height: 50%;
+}
+
+.payment-stats {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+
+    div{
+        text-align: center;
+        padding: 2px;
+        min-width: 45%;
+
+    }
+}
+
+.percentage {
+    color: green;
+    font-size: smaller;
+}
+
+#family-details{
+    grid-area: fam-overview;
+    display: flex;
+    flex-direction: column;
+
+    div{
+        margin-bottom: 20px;
+    }
+
+}
+
+#balance-details{
+    grid-area: snapshot-two;
+}
+
+#student-breakdown{
+    grid-area: student;
+
+    div{
+        margin-bottom: 20px;
+    }
+}
+
+#revenue-graph{
+    grid-area: snapshot-three;
+
+    div{
+        margin-bottom: 20px;
+    }
+
+    p{
+        margin: 10px 0 0 0;
+    }
+}
+
+#payment-plans{
+    grid-area: payment;
+
+    div{
+        margin-bottom: 20px;
+    }
+}
