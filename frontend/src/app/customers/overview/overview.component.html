@@ -19,7 +19,8 @@
             <mat-form-field style="width: 25%;">
                 <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
             </mat-form-field>
-            <button mat-flat-button color="primary">New Enrollment</button>
+            <button mat-flat-button color="primary"
+            (click)="openNewFamilyDialog()">New Enrollment</button>
         </div>
         
         <div>

@@ -2,6 +2,8 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatTableDataSource } from '@angular/material/table';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
+import { BaseModalService } from 'src/app/_services/base-modal.service';
+import { NewFamilyForms } from './newfamily.forms';
 
 export interface FamilyData {
   last_name: string;
@@ -25,11 +27,14 @@ const NAMES: string[] = [
 export class OverviewComponent implements OnInit {
   displayedColumns: string[] = ['last_name', 'first_name', 'student_count', 'status' ,'enrollment_date', 'details'];
   dataSource: MatTableDataSource<FamilyData>;
+  newFamilyForms = NewFamilyForms;
 
   @ViewChild(MatPaginator, {static: true}) paginator: MatPaginator;
   @ViewChild(MatSort, {static: true}) sort: MatSort;
 
-  constructor() {
+  constructor(
+    private _baseModalService : BaseModalService
+  ) {
     const users = Array.from({length: 37}, (_, k) => createNewUser(k + 1));
     // Assign the data to the data source for the table to render
     this.dataSource = new MatTableDataSource(users);
@@ -38,6 +43,10 @@ export class OverviewComponent implements OnInit {
   ngOnInit() {
     this.dataSource.paginator = this.paginator;
     this.dataSource.sort = this.sort;
+  }
+
+  openNewFamilyDialog(){
+    this._baseModalService.openBottomSheet(this.newFamilyForms.NEW_FAMILY);
   }
 
   applyFilter(filterValue: string) {

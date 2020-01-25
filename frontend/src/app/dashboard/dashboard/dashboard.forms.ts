@@ -35,7 +35,7 @@ const Enrollment: BaseModalFieldsModel = {
     ],
 }
 
-export const Payment: BaseModalFieldsModel = {
+const Payment: BaseModalFieldsModel = {
     title: 'Process Payment',
     button_text: 'Process Payment',
     fields: [
