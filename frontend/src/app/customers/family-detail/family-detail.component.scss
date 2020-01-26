@@ -29,7 +29,7 @@ h3{
 }
 
 .students{
-    height: 50%;
+    min-height: 180px;
 }
 
 .payment-stats {
@@ -49,6 +49,18 @@ h3{
 .percentage {
     color: green;
     font-size: smaller;
+}
+
+.activity-holder {
+    display: flex;
+    flex-direction: column;
+
+    .activity-item{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        color: grey;
+    }
 }
 
 #family-details{
