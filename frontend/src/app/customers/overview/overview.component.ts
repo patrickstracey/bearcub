@@ -3,7 +3,7 @@ import { MatTableDataSource } from '@angular/material/table';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { BaseModalService } from 'src/app/_services/base-modal.service';
-import { NewFamilyForms } from './newfamily.forms';
+import { NewFamilyForms } from './overview.forms';
 
 export interface FamilyData {
   last_name: string;
