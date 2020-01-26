@@ -14,10 +14,10 @@ const routes: Routes = [
   { path: '', component: DashboardComponent },
   { path: 'family/detail', component: FamilyDetailComponent },
   { path: 'family', component: OverviewComponent },
-  { path: 'plans', component: GeneratorComponent },
+  { path: 'plans', component: GeneratorComponent },  
+  { path: 'classrooms', component: ClassesComponent },
+  { path: 'offerings', component: OfferingsComponent },
   { path: 'settings/business-info', component: BusinessComponent },
-  { path: 'settings/classes', component: ClassesComponent },
-  { path: 'settings/offerings', component: OfferingsComponent },
   { path: 'login', component: LoginComponent },
 ];
 
