@@ -16,6 +16,23 @@
     text-align: right;
 }
 
+.progress-circle {
+    position: relative;
+    height: 300px;
+    width: 100%;
+    
+    .svg-holder{
+        margin-left: calc(100% - 22vw);
+
+        mat-progress-spinner{
+            margin: auto;
+            display: unset !important;
+        }
+    }
+
+    
+}
+
 button {
     font-size: 2rem;
     border-radius: 20px 20px 0px 0px;

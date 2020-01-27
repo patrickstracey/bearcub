@@ -15,6 +15,7 @@ import { MatExpansionModule } from '@angular/material/expansion';
 import { MatSelectModule } from '@angular/material/select';
 import { MatSliderModule } from '@angular/material/slider';
 import { MatBottomSheetModule } from '@angular/material/bottom-sheet';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 
 @NgModule({
@@ -22,12 +23,14 @@ import { MatBottomSheetModule } from '@angular/material/bottom-sheet';
                MatIconModule, MatListModule, MatCardModule,
                MatFormFieldModule, MatInputModule, MatTableModule,
                MatPaginatorModule, MatChipsModule, MatExpansionModule,
-               MatSelectModule, MatSliderModule, MatBottomSheetModule ],
+               MatSelectModule, MatSliderModule, MatBottomSheetModule,
+               MatProgressSpinnerModule ],
     exports: [ MatSidenavModule, MatToolbarModule, MatButtonModule,
                MatIconModule, MatListModule, MatCardModule,
                MatFormFieldModule, MatInputModule,MatTableModule,
                MatPaginatorModule, MatChipsModule, MatExpansionModule,
-               MatSelectModule, MatSliderModule, MatBottomSheetModule ]
+               MatSelectModule, MatSliderModule, MatBottomSheetModule,
+               MatProgressSpinnerModule ]
 })
 
 export class MaterialModule {}
