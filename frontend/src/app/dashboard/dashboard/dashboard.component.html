@@ -8,13 +8,20 @@
         <h3>(775) 555-0136</h3>
     </div>
 
-    <button mat-flat-button color="accent" id="b1" (click)="openDialog(dashboardForms.CHECKIN)">Check-in Student</button>
-    <button mat-flat-button color="accent" id="b2" (click)="openDialog(dashboardForms.ENROLLMENT)">Enroll New Student</button>
-    <button mat-flat-button color="accent" id="b3" (click)="openDialog(dashboardForms.PAYMENT)">Process Payment</button>
+    <button mat-flat-button color="accent" class="dashboard-btn" id="b1" (click)="openDialog(dashboardForms.CHECKIN)">Check-in Student</button>
+    <button mat-flat-button color="accent" class="dashboard-btn" id="b2" (click)="openDialog(dashboardForms.ENROLLMENT)">Enroll New Student</button>
+    <button mat-flat-button color="accent" class="dashboard-btn" id="b3" (click)="openDialog(dashboardForms.PAYMENT)">Process Payment</button>
     <mat-card id="p1">
         <div class="card-data">
-            <div>
-                <p>Hello</p>
+            <div class="spinner-header">
+                <div class="card-metric">
+                    <h1>14</h1>
+                    <p>Checked-in</p>
+                </div>
+                <div class="card-metric">
+                    <h1>31</h1>
+                    <p>Scheduled</p>
+                </div>
             </div>
             <div class="progress-circle">
                 <div class="svg-holder">
@@ -31,54 +38,90 @@
                     value="45"
                     diameter="250">
                     </mat-progress-spinner>
-                </div>
-                
+                </div> 
+            </div>
+            <div class="spinner-footer">
+                <button mat-button color="accent">View Scheduled Check-ins</button>
             </div>
         </div>
                
     </mat-card>
     <mat-card id="p2">
-        <div class="progress-circle">
-            <div class="svg-holder">
-                <mat-progress-spinner
-                color="primary"
-                mode="determinate"
-                value="100"
-                diameter="250"
-                style="opacity: .2;">
-                </mat-progress-spinner>
-                <mat-progress-spinner
-                color="primary"
-                mode="determinate"
-                value="45"
-                diameter="250">
-                </mat-progress-spinner>
+        <div class="card-data">
+            <div class="spinner-header">
+                <div class="card-metric">
+                    <h1>57</h1>
+                    <p>Current Students</p>
+                </div>
+                <div class="card-metric">
+                    <h1>80</h1>
+                    <p>Max Capacity</p>
+                </div>
+            </div>
+            <div class="progress-circle">
+                <div class="svg-holder">
+                    <mat-progress-spinner
+                    color="primary"
+                    mode="determinate"
+                    value="100"
+                    diameter="250"
+                    style="opacity: .2;">
+                    </mat-progress-spinner>
+                    <mat-progress-spinner
+                    color="primary"
+                    mode="determinate"
+                    value="72"
+                    diameter="250">
+                    </mat-progress-spinner>
+                </div> 
+            </div>
+            <div class="spinner-footer">
+                <button mat-button color="accent">View Current Students</button>
             </div>
         </div> 
     </mat-card>
     <mat-card id="p3">
-        <div class="progress-circle">
-            <div class="svg-holder">
-                <mat-progress-spinner
-                color="primary"
-                mode="determinate"
-                value="100"
-                diameter="250"
-                style="opacity: .2;">
-                </mat-progress-spinner>
-                <mat-progress-spinner
-                color="accent"
-                mode="determinate"
-                value="80"
-                diameter="250"
-                style="opacity: .4;">
-                </mat-progress-spinner>
-                <mat-progress-spinner
-                color="primary"
-                mode="determinate"
-                value="45"
-                diameter="250">
-                </mat-progress-spinner>
+        <div class="card-data">
+            <div class="spinner-header">
+                <div class="card-metric">
+                    <h1>$1,455</h1>
+                    <p>Paid</p>
+                </div>
+                <div class="card-metric">
+                    <h1>$1,645</h1>
+                    <p>Scheduled</p>
+                </div>
+                <div class="card-metric">
+                    <h1>$3,100</h1>
+                    <p>Owed</p>
+                </div>
+            </div>
+            <div class="progress-circle">
+                <div class="svg-holder">
+                    <mat-progress-spinner
+                    color="primary"
+                    mode="determinate"
+                    value="100"
+                    diameter="250"
+                    style="opacity: .2;">
+                    </mat-progress-spinner>
+                    <mat-progress-spinner
+                    color="accent"
+                    mode="determinate"
+                    value="100"
+                    diameter="250"
+                    style="opacity: .4;">
+                    </mat-progress-spinner>
+                    <mat-progress-spinner
+                    color="primary"
+                    mode="determinate"
+                    value="47"
+                    diameter="250">
+                    </mat-progress-spinner> 
+                </div>
+            </div>
+            <div class="spinner-footer">
+                <button mat-button color="accent">View Payments</button>
             </div>
         </div> 
     </mat-card>
