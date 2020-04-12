@@ -3,7 +3,7 @@ import { MatTableDataSource } from '@angular/material/table';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { BaseModalService } from 'src/app/_services/base-modal.service';
-import { NewFamilyForms } from './family-overview.forms';
+import { NewStudentForms } from './student-overview.forms';
 
 export interface FamilyData {
   last_name: string;
@@ -20,14 +20,14 @@ const NAMES: string[] = [
 //Place to search and view all current customers
 
 @Component({
-  selector: 'app-family-overview',
-  templateUrl: './family-overview.component.html',
-  styleUrls: ['./family-overview.component.scss']
+  selector: 'app-student-overview',
+  templateUrl: './student-overview.component.html',
+  styleUrls: ['./student-overview.component.scss']
 })
-export class FamilyOverviewComponent implements OnInit {
+export class StudentOverviewComponent implements OnInit {
   displayedColumns: string[] = ['last_name', 'first_name', 'student_count', 'status' ,'enrollment_date', 'details'];
   dataSource: MatTableDataSource<FamilyData>;
-  newFamilyForms = NewFamilyForms;
+  newStudentForms = NewStudentForms;
 
   @ViewChild(MatPaginator, {static: true}) paginator: MatPaginator;
   @ViewChild(MatSort, {static: true}) sort: MatSort;
@@ -46,7 +46,7 @@ export class FamilyOverviewComponent implements OnInit {
   }
 
   openNewFamilyDialog(){
-    this._baseModalService.openBottomSheet(this.newFamilyForms.NEW_FAMILY);
+    this._baseModalService.openBottomSheet(this.newStudentForms.NEW_STUDENT);
   }
 
   applyFilter(filterValue: string) {
