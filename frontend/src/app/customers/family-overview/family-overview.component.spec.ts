@@ -1,6 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { OverviewComponent } from './overview.component';
+import { OverviewComponent } from './family-overview.component';
 
 describe('OverviewComponent', () => {
   let component: OverviewComponent;

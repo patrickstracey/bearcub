@@ -3,7 +3,7 @@ import { MatTableDataSource } from '@angular/material/table';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { BaseModalService } from 'src/app/_services/base-modal.service';
-import { NewFamilyForms } from './overview.forms';
+import { NewFamilyForms } from './family-overview.forms';
 
 export interface FamilyData {
   last_name: string;
@@ -21,8 +21,8 @@ const NAMES: string[] = [
 
 @Component({
   selector: 'app-overview',
-  templateUrl: './overview.component.html',
-  styleUrls: ['./overview.component.scss']
+  templateUrl: './family-overview.component.html',
+  styleUrls: ['./family-overview.component.scss']
 })
 export class OverviewComponent implements OnInit {
   displayedColumns: string[] = ['last_name', 'first_name', 'student_count', 'status' ,'enrollment_date', 'details'];
