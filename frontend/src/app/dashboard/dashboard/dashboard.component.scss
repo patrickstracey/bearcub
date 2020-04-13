@@ -1,3 +1,8 @@
+.dashboard-btn {
+    font-size: 2rem;
+    border-radius: 20px 20px 0px 0px;
+}
+
 .page-grid {
     grid-template-areas: 
         "subhead subhead location"
@@ -16,10 +21,45 @@
     text-align: right;
 }
 
-button {
-    font-size: 2rem;
-    border-radius: 20px 20px 0px 0px;
+.spinner-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
+
+.spinner-footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 1vh;
+}
+
+.card-metric {
+    text-align: center;
+
+    p {
+        margin: 0px;
+    }
+}
+
+.progress-circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-top: 40px;
+    
+    .svg-holder{
+        height: 250px;
+        width: 250px;
+        mat-progress-spinner{
+            margin: auto;
+            display: unset !important;
+        }
+    }
+  
+}
+
 
 #b1 {
     grid-area: btn-one;
