@@ -20,6 +20,10 @@ import { FormsModule } from '@angular/forms';
 import { PlanChartComponent } from './shared/plan-chart/plan-chart.component';
 import { BasemodalComponent } from './shared/modal/basemodal/basemodal.component';
 import { StudentOverviewComponent } from './customers/student-overview/student-overview.component';
+import { StudentDetailComponent } from './customers/student-detail/student-detail.component';
+import { EmployeeOverviewComponent } from './employees/employee-overview/employee-overview.component';
+import { RoomOverviewComponent } from './rooms/room-overview/room-overview.component';
+import { EmployeeDetailsComponent } from './employees/employee-details/employee-details.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +40,11 @@ import { StudentOverviewComponent } from './customers/student-overview/student-o
     ToolbarComponent,
     SidenavListComponent,
     PlanChartComponent,
-    BasemodalComponent
+    BasemodalComponent,
+    StudentDetailComponent,
+    EmployeeOverviewComponent,
+    RoomOverviewComponent,
+    EmployeeDetailsComponent
   ],
   imports: [
     BrowserModule,
