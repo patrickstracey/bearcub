@@ -6,24 +6,19 @@ const StudentForm: BaseModalFieldsModel = {
     button_text: 'Enroll',
     fields: [
       {
-        name: 'Family Last Name',
+        name: 'Family',
         input_type: 'text',
-        hint:"Last name of the student's family",
+        hint:"Select an existing family",
       },
       {
-        name: 'Parent First Name',
-        input_type: 'text',
-        hint:'Name of the parent enrolling the student(s)'
-      },
-      {
-        name: 'Payment Credit Card Number',
-        input_type: 'text',
-        placeholder: "**** **** **** ****"
-      },
-      {
-        name: 'Student Name',
+        name: 'Student First Name',
         input_type: 'text',
         hint:'Name of the student being enrolled'
+      },
+      {
+        name: 'Student Last Name',
+        input_type: 'text',
+        hint:'Surname of the student being enrolled'
       },
       {
         name: 'Student Age',

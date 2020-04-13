@@ -23,7 +23,7 @@ const FamilyForm: BaseModalFieldsModel = {
       {
         name: 'Student Name',
         input_type: 'text',
-        hint:'Name of the student being enrolled'
+        hint:'Name of the first student being enrolled'
       },
       {
         name: 'Student Age',
