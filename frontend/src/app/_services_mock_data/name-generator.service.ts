@@ -22,6 +22,14 @@ export interface StaffData {
   hire_date: Date;
 }
 
+export interface RoomData {
+  classroom_name: string;
+  square_footage: number;
+  building_name: string;
+}
+
+const CLASSROOM_NAMES: string[] = ["Sunshine", "Burrow", "Moonlight", "Redwood", "Kelp", "Spaceship"];
+
 const NAMES: string[] = [
     'Maia', 'Asher', 'Olivia', 'Atticus', 'Amelia', 'Jack', 'Charlotte', 'Theodore', 'Isla', 'Oliver',
     'Isabella', 'Jasper', 'Cora', 'Levi', 'Violet', 'Arthur', 'Mia', 'Thomas', 'Elizabeth'
@@ -69,6 +77,22 @@ export class MockNameGeneratorService {
         hire_date: hired
       }
     }
+
+    createNewRooms(): RoomData[] {
+
+      let classrooms : RoomData[] = [];
+
+      CLASSROOM_NAMES.forEach((classroom_name)=>{
+        const new_room : RoomData = {
+          classroom_name: classroom_name,
+          building_name: "Building A",
+          square_footage: Math.floor(Math.random() * (4000 - 750) + 750),
+        }
+        classrooms.push(new_room);
+        })
+        
+        return classrooms;
+      };
 
 
 }
