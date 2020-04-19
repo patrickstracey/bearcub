@@ -1,0 +1,43 @@
+table {
+    width: 100%;
+}
+
+td, th {
+    min-width: 10vw;
+}
+
+.ov-table-overview {
+    grid-template-areas: 
+        "subhead subhead subhead"
+        "ov-table ov-table ov-table"
+        "ov-table ov-table ov-table"
+        "ov-table ov-table ov-table"
+        "ov-table ov-table ov-table";
+}
+
+.table-actions {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;;
+}
+
+.stat {
+    font-size: xxx-large;
+}
+
+#snapshot-1{
+    grid-area: snapshot-one;
+}
+
+#snapshot-2{
+    grid-area: snapshot-two;
+}
+
+#snapshot-3{
+    grid-area: snapshot-three;
+}
+
+#index-table{
+    grid-area: ov-table;
+}
