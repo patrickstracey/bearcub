@@ -1,0 +1,114 @@
+@import '../../../styles.scss';
+
+
+mat-panel-title{
+    min-width: 50%;
+}
+
+mat-icon, .subtext {
+    color: #757575;
+}
+
+h3{
+    margin: unset;
+}
+
+.student-detail-layout {
+    grid-template-areas: 
+        "subhead subhead subhead"
+        "student-overview contact-block student"
+        "student-overview contact-block student"
+        "student-overview payment student"
+        "student-overview payment student";
+}
+
+.page-header{
+    grid-area: subhead;
+}
+
+.students{
+    min-height: 180px;
+}
+
+.overview-holder {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    .contact {
+        width: 45%;
+        background-color: rgba(220, 220, 220, 0.257);
+        padding-left: 2%;
+        border-radius: 5px;
+    }
+
+}
+
+.image-gallery {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+
+    div{
+        text-align: center;
+        padding: 2px;
+        min-width: 45%;
+
+    }
+}
+
+.percentage {
+    color: green;
+    font-size: smaller;
+}
+
+.activity-holder {
+    display: flex;
+    flex-direction: column;
+
+    .activity-item{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        color: grey;
+    }
+}
+
+#student-details{
+    grid-area: student-overview;
+    display: flex;
+    flex-direction: column;
+
+    div{
+        margin-bottom: 20px;
+    }
+
+}
+
+#balance-details{
+    grid-area: snapshot-two;
+}
+
+#student-breakdown{
+    grid-area: student;
+
+    div{
+        margin-bottom: 20px;
+    }
+}
+
+#student-contacts{
+    grid-area: contact-block;
+
+    
+}
+
+#payment-plans{
+    grid-area: payment;
+
+    div{
+        margin-bottom: 20px;
+    }
+}

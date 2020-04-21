@@ -1,1 +1,91 @@
-<p>student-detail works!</p>
+<div class="page-grid sm-top student-detail-layout">
+    <div class="page-header header">
+        <h1>Maia Smith</h1>
+        <mat-chip-list>
+            <mat-chip color="accent" selected>Active</mat-chip>
+        </mat-chip-list>
+    </div>
+
+    <mat-card id="student-details">
+        <div class="student-info">
+            <div class="header"><h3>Student Info</h3></div>
+            <span class="overview-holder">
+                <p>Birthday</p>
+                <p>10/04/2017</p>
+            </span>
+            <span class="overview-holder">
+                <p>Class</p>
+                <p>Ms. Lessing's Class</p>
+            </span>
+            <span class="overview-holder">
+                <p>Date Enrolled</p>
+                <p>2/19/2020</p>
+            </span>
+            <span class="overview-holder">
+                <p>Last Check-n</p>
+                <p>5/19/2020</p>
+            </span>
+        </div>
+        <div class="student-notes">
+            <div class="header"><h3>Family Contacts</h3><button mat-button color="primary" [routerLink]="['/family/detail']" routerLinkActive="router-link-active" >Details</button></div>
+            <div class="overview-holder">
+                <div class="contact">
+                    <p>Jennifer Smith <small>(Mother)</small></p>
+                    <p>(775) 555-0132</p>
+                    <p>jenn.smith@gmail.com</p>
+                </div>
+                <div class="contact">
+                    <p>Kevin Smith <small>(Father)</small></p>
+                    <p>(775) 555-0188</p>
+                    <p>ksmith775@gmail.com</p>
+                </div>
+                <div class="contact">
+                    <p>Jennifer Smith <small>(Mother)</small></p>
+                    <p>(775) 555-0132</p>
+                    <p>jenn.smith@gmail.com</p>
+                </div>
+                <div class="contact">
+                    <p>Kevin Smith <small>(Father)</small></p>
+                    <p>(775) 555-0188</p>
+                    <p>ksmith775@gmail.com</p>
+                </div>
+            </div>  
+        </div>
+        <div class="student-paperwork">
+            <div class="header"><h3>Paperwork</h3></div>
+        </div>  
+    </mat-card>
+
+    <mat-card id="student-breakdown">
+        <div class="activity">
+            <div class="header"><h3>Recent Activity</h3></div>
+            <div class="activity-holder">
+                <span class="activity-item" *ngFor="let activity of activities">
+                    <p>{{activity.event}}</p>
+                    <p>{{activity.date | date:'short'}}</p>
+                </span>
+            </div>
+        </div>
+        
+    </mat-card>
+
+
+    <mat-card id="student-contacts">
+        <div class="contact">
+            <div class="header"><h3>Notes</h3></div>
+             
+        </div>
+    </mat-card>
+    <mat-card id="payment-plans">
+        <div>
+            <div class="header"><h3>Image Gallery</h3></div>
+            <div class="image-gallery">
+
+            </div>
+            
+        </div>
+    </mat-card>
+
+
+
+</div>
