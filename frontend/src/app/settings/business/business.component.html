@@ -1,1 +1,128 @@
-<p>business works!</p>
+<div class="page-grid sm-top business-settings-layout">
+    <div class="page-header header">
+        <h1>Business Settings</h1>
+    </div>
+
+    <mat-card id="core-business">
+        <form>
+            <div class="form-section">
+                <h3>Basic Information</h3>
+                <mat-form-field appearance="standard">
+                    <mat-label>Location Name</mat-label>
+                    <input matInput placeholder="Bearcub Academy - Reno" type="text" required>
+                    <mat-hint>The name of your school.</mat-hint>
+                </mat-form-field>
+                <mat-form-field appearance="standard">
+                    <mat-label>Tagline</mat-label>
+                    <input matInput placeholder="Where cubs become bears" type="text">
+                    <mat-hint>Your slogan (if you have one)</mat-hint>
+                </mat-form-field>
+                <mat-form-field appearance="standard">
+                    <mat-label>Business Description</mat-label>
+                    <textarea matInput></textarea>
+                    <mat-hint>A more long form description if your school</mat-hint>
+                </mat-form-field>
+                <div class="logo-field">
+                    <span>Logo</span>
+                    <div id=logo></div>
+                </div>              
+            </div>
+            <button mat-flat-button color="primary" type="submit">Submit</button>          
+        </form>
+    </mat-card>
+
+    <mat-card id="operating-hours">
+        <form>
+            <div class="form-section">
+                <h3>Operating Hours</h3>
+            </div>
+            <div class="day" *ngFor="let day of DAYS">
+                <span>{{day}}</span>
+                <div class="day-hour-holder">
+                    <div class="time-input">
+                        <mat-form-field appearance="standard">
+                            <mat-label>Hour</mat-label>
+                            <input matInput min="1" max="12" value="9" type="number">
+                        </mat-form-field>
+                        <span> : </span>
+                        <mat-form-field appearance="standard">
+                            <mat-label>Min</mat-label>
+                            <input matInput min="0" max="59" value="30" type="number">
+                        </mat-form-field>
+                        <mat-form-field appearance="standard">
+                            <mat-select value="AM">
+                            <mat-option value="AM">AM</mat-option>
+                            <mat-option value="PM">PM</mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </div>
+                    <span style="margin-right: 20px;"> - </span>
+                    <div class="time-input">
+                        <mat-form-field appearance="standard">
+                            <mat-label>Hour</mat-label>
+                            <input matInput min="1" max="12" value="5" type="number">
+                        </mat-form-field>
+                        <span> : </span>
+                        <mat-form-field appearance="standard">
+                            <mat-label>Min</mat-label>
+                            <input matInput min="0" max="59" value="15" type="number">
+                        </mat-form-field>
+                        <mat-form-field appearance="standard">
+                            <mat-select value="PM">
+                            <mat-option value="AM">AM</mat-option>
+                            <mat-option value="PM">PM</mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </div>
+                </div>
+            </div>
+            <!-- ------------------------------------------------ -->
+            <button mat-flat-button color="primary" type="submit">Submit</button>          
+        </form>
+    </mat-card>
+
+    <mat-card id="billing">
+        <div class="header"><h3>Accounts & Billing</h3></div>
+        <div class="payment">
+            <span>Bearcub Billing<button mat-button color="primary">Edit</button></span>
+            <p><mat-icon>credit_card</mat-icon> **** **** **** 2883</p>
+            <p class="subtext">Kids Klub Reno - Credit</p>
+        </div>
+        <div class="payment">
+            <span>Receivables Account<button mat-button color="primary">Edit</button></span>
+            <p><mat-icon>how_to_vote</mat-icon> ************ 6901</p>
+            <p class="subtext">Wells Fargo Small Business Account</p>
+        </div>   
+    </mat-card>
+
+    <mat-card id="plan">
+        <div class="header"><h3>Bearcub Plan</h3><button mat-button color="primary">Upgrade</button></div>
+        <div id="plan-options">
+            <div class="available-plan active">
+                <div class="line-item">
+                    <p>Core</p><p>$24.00</p>
+                </div>
+                <div class="line-item" id="description">
+                    <small>This is a short description about this plan and everything that makes it absolutely awesome.</small>
+                </div>
+                <div class="line-item">
+                    <span>Billed on the 14th</span>
+                    <span>Monthly</span>
+                </div>
+            </div>
+            <div class="available-plan inactive" *ngFor="let plan of PLANS">
+                <div class="line-item">
+                    <p>Core</p><p>$24.00</p>
+                </div>
+                <div class="line-item" id="description">
+                    <small>This is a short description about this plan and everything that makes it absolutely awesome.</small>
+                </div>
+            </div>
+        </div>
+        
+
+        <span style="margin-top: 10px;"><small><i>Save 25% by switching to annual billing</i> (<a href="">Learn More</a>)</small></span>
+    </mat-card>
+
+
+</div>

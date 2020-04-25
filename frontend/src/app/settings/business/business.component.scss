@@ -1,0 +1,145 @@
+@import '../../../styles.scss';
+
+.business-settings-layout {
+    grid-template-areas: 
+        "subhead subhead subhead"
+        "basic hours billing"
+        "basic hours billing"
+        "basic hours plan"
+        "basic hours plan";
+}
+
+span{
+    color: mat-color($mat-grey, 600);
+}
+
+mat-card{
+    display: flex;
+    flex-direction: column;
+
+    form {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+
+        button {
+            margin-top: auto;
+
+        }
+
+        .form-section{
+            margin-bottom: 25px;
+
+            mat-form-field{
+                width: 100%;
+                margin-top: 10px;
+            }
+
+            .logo-field{
+                margin-top: 25px;
+
+                #logo{
+                    background-color: mat-color($mat-grey, 200);
+                    height: 150px;
+                    width: 150px;
+                    margin: auto;
+                    margin-top: 15px;
+                }
+            }
+
+            
+        }
+    }
+}
+
+.day-hour-holder{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.time-input{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    width: 40%;
+    flex-grow: 2;
+
+    > *{
+        margin-left: 4px;
+        margin-right: 4px;
+
+    }
+
+    mat-form-field {
+        width: 25%;
+        
+    }
+}
+
+.payment {
+    margin-top: 25px;
+
+    span{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+.available-plan{
+
+    margin: 15px 15px 0px 5px;
+    padding: 0px 5px 10px;
+    border-radius: 5px;
+
+    .line-item{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    #description{
+        margin-bottom: 10px;
+    }
+}
+
+.active{
+    border: solid 2px;
+    border-color: mat-color($frontend-primary, 600);
+    background-color: mat-color($frontend-primary, 50);
+
+}
+
+.inactive{
+    border: solid 1px;
+    border-color: mat-color($mat-grey, 200);
+}
+
+#core-business{
+    grid-area: basic;
+}
+
+#operating-hours{
+    grid-area: hours;
+}
+
+#billing{
+    grid-area: billing;
+}
+
+#plan{
+    grid-area: plan;
+
+    #plan-options{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        min-height: 40%;
+    }
+}
+
