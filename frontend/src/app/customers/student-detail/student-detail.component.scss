@@ -13,12 +13,16 @@ h3{
     margin: unset;
 }
 
+h4{
+    opacity: .6;
+}
+
 .student-detail-layout {
     grid-template-areas: 
         "subhead subhead subhead"
         "student-overview contact-block student"
         "student-overview contact-block student"
-        "student-overview payment student"
+        "student-overview contact-block student"
         "student-overview payment student";
 }
 
@@ -38,6 +42,13 @@ h3{
 
     .contact {
         width: 45%;
+        padding-left: 2%;
+        border-radius: 5px;
+    }
+
+    .file {
+        width: 30%;
+        height: 200px;
         background-color: rgba(220, 220, 220, 0.257);
         padding-left: 2%;
         border-radius: 5px;
@@ -45,17 +56,24 @@ h3{
 
 }
 
+
+.moment {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .image-gallery {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: flex-start;
 
-    div{
-        text-align: center;
-        padding: 2px;
-        min-width: 45%;
-
+    .image-item {
+        width: 5vw;
+        height: 5vw;
+        background-color: rgba(220, 220, 220, 0.257);
+        margin: 5px;
     }
 }
 
@@ -76,7 +94,23 @@ h3{
     }
 }
 
-#student-details{
+#student-name-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    #p-photo{
+        width: 60px;
+        height: 60px;
+        margin: 0 5px 5px 5px;
+        background-color: rgb(220, 220, 220);
+        //border-radius: 50%;
+        z-index: 2;
+    }
+}
+
+#student-details {
     grid-area: student-overview;
     display: flex;
     flex-direction: column;
@@ -99,8 +133,11 @@ h3{
     }
 }
 
-#student-contacts{
+#student-notes{
     grid-area: contact-block;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 
     
 }

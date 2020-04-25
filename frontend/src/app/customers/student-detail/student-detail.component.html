@@ -1,6 +1,14 @@
 <div class="page-grid sm-top student-detail-layout">
     <div class="page-header header">
-        <h1>Maia Smith</h1>
+        <div id="student-name-header">
+            <h1 style="margin-right: 1vw;">Maia Smith</h1>
+            <div id="p-photo"></div>
+            <div id="p-photo"></div>
+            <div id="p-photo"></div>
+            <div id="p-photo"></div>
+            <div id="p-photo"></div>
+            <div id="p-photo"></div>
+        </div>
         <mat-chip-list>
             <mat-chip color="accent" selected>Active</mat-chip>
         </mat-chip-list>
@@ -8,7 +16,7 @@
 
     <mat-card id="student-details">
         <div class="student-info">
-            <div class="header"><h3>Student Info</h3></div>
+            <div class="header"><h3>Student Info</h3><button mat-button color="primary">Edit</button></div>
             <span class="overview-holder">
                 <p>Birthday</p>
                 <p>10/04/2017</p>
@@ -52,12 +60,43 @@
             </div>  
         </div>
         <div class="student-paperwork">
-            <div class="header"><h3>Paperwork</h3></div>
+            <div class="header"><h3>Enrollment Paperwork</h3><button mat-button color="primary">Upload</button></div>
+            <div class="overview-holder">
+                <div class="file"></div>
+                <div class="file"></div>
+                <div class="file"></div>
+                <div class="file"></div>
+            </div>
         </div>  
     </mat-card>
 
     <mat-card id="student-breakdown">
         <div class="activity">
+            <div class="header"><h3>Report Cards</h3><button mat-button color="primary">Upload</button></div>
+            <div class="overview-holder">
+                <div class="file"></div>
+                <div class="file"></div>
+                <div class="file"></div>
+            </div>
+            <div class="header"><h3>Moments</h3></div>
+            <div class="overview-holder">
+                <div class="moment">
+                    <mat-icon>sentiment_very_satisfied</mat-icon>
+                    <p>Kudos (5)</p>
+                </div>
+                <div class="moment">
+                    <mat-icon>plus_one</mat-icon>
+                    <p>Helpful (19)</p>
+                </div>
+                <div class="moment">
+                    <mat-icon>sentiment_very_dissatisfied</mat-icon>
+                    <p>Unhappy (11)</p>
+                </div>
+                <div class="moment">
+                    <mat-icon>spellcheck</mat-icon>
+                    <p>Clever (7)</p>
+                </div>
+            </div>
             <div class="header"><h3>Recent Activity</h3></div>
             <div class="activity-holder">
                 <span class="activity-item" *ngFor="let activity of activities">
@@ -70,17 +109,41 @@
     </mat-card>
 
 
-    <mat-card id="student-contacts">
-        <div class="contact">
-            <div class="header"><h3>Notes</h3></div>
-             
+    <mat-card id="student-notes">
+        <div class="notes">
+            <h3>Notes</h3>
+            <div class="header"><h4><mat-icon>event</mat-icon>Today's Notes</h4></div>
+            <p>This is where a temporary note a parent may write when checking in the student would be.</p> 
+        </div>
+        <div class="notes">
+            <div class="header"><h4><mat-icon>child_friendly</mat-icon>Parental Notes</h4></div>
+            <p>This is where a permanent note from parents about the student would live.</p> 
+        </div>
+        <div class="notes">
+            <div class="header"><h4><mat-icon>assignment</mat-icon>Teacher Notes</h4></div>
+            <p>This is where a permanent note from a teacher about the student would live.</p>
+        </div>
+        <div class="notes">
+            <div class="header"><h4><mat-icon>account_balance</mat-icon>School Notes</h4></div>
+            <p>This is where a permanent note from school admin about the student would live.</p>
         </div>
     </mat-card>
     <mat-card id="payment-plans">
         <div>
             <div class="header"><h3>Image Gallery</h3></div>
             <div class="image-gallery">
-
+                <div class="image-item"></div>
+                <div class="image-item"></div>
+                <div class="image-item"></div>
+                <div class="image-item"></div>
+                <div class="image-item"></div>
+                <div class="image-item"></div>
+                <div class="image-item"></div>
+                <div class="image-item"></div>
+                <div class="image-item"></div>
+                <div class="image-item"></div>
+                <div class="image-item"></div>
+                <div class="image-item"></div>
             </div>
             
         </div>
