@@ -42,6 +42,16 @@ h1, h2 {
     font-family: 'NTR', sans-serif;
 }
 
+p {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+mat-icon {
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
 .page-grid{
     display: grid;
     height: 100%;
@@ -55,6 +65,8 @@ h1, h2 {
 }
 
 .sm-top{
+    //alternate style?
+    //grid-template-rows: 30px 15vh 30vh 30vh auto;
     grid-template-rows: 35px 15vh 20vh 20vh auto;
     grid-row-gap: 20px;
 }

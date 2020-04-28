@@ -1,0 +1,151 @@
+@import '../../../styles.scss';
+
+
+mat-panel-title{
+    min-width: 50%;
+}
+
+mat-icon, .subtext {
+    color: #757575;
+}
+
+h3{
+    margin: unset;
+}
+
+h4{
+    opacity: .6;
+}
+
+.student-detail-layout {
+    grid-template-areas: 
+        "subhead subhead subhead"
+        "student-overview contact-block student"
+        "student-overview contact-block student"
+        "student-overview contact-block student"
+        "student-overview payment student";
+}
+
+.page-header{
+    grid-area: subhead;
+}
+
+.students{
+    min-height: 180px;
+}
+
+.overview-holder {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    .contact {
+        width: 45%;
+        padding-left: 2%;
+        border-radius: 5px;
+    }
+
+    .file {
+        width: 30%;
+        height: 200px;
+        background-color: rgba(220, 220, 220, 0.257);
+        padding-left: 2%;
+        border-radius: 5px;
+    }
+
+}
+
+
+.moment {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.image-gallery {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+
+    .image-item {
+        width: 5vw;
+        height: 5vw;
+        background-color: rgba(220, 220, 220, 0.257);
+        margin: 5px;
+    }
+}
+
+.percentage {
+    color: green;
+    font-size: smaller;
+}
+
+.activity-holder {
+    display: flex;
+    flex-direction: column;
+
+    .activity-item{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        color: grey;
+    }
+}
+
+#student-name-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    #p-photo{
+        width: 60px;
+        height: 60px;
+        margin: 0 5px 5px 5px;
+        background-color: rgb(220, 220, 220);
+        //border-radius: 50%;
+        z-index: 2;
+    }
+}
+
+#student-details {
+    grid-area: student-overview;
+    display: flex;
+    flex-direction: column;
+
+    div{
+        margin-bottom: 20px;
+    }
+
+}
+
+#balance-details{
+    grid-area: snapshot-two;
+}
+
+#student-breakdown{
+    grid-area: student;
+
+    div{
+        margin-bottom: 20px;
+    }
+}
+
+#student-notes{
+    grid-area: contact-block;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    
+}
+
+#payment-plans{
+    grid-area: payment;
+
+    div{
+        margin-bottom: 20px;
+    }
+}

@@ -63,6 +63,19 @@ h3{
     }
 }
 
+.contacts-holder {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    .contact {
+        width: 45%;
+        padding-left: 2%;
+        border-radius: 5px;
+    }
+}
+
 #family-details{
     grid-area: fam-overview;
     display: flex;
@@ -71,7 +84,6 @@ h3{
     div{
         margin-bottom: 20px;
     }
-
 }
 
 #balance-details{
