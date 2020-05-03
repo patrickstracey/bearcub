@@ -46,16 +46,14 @@ h4{
         border-radius: 5px;
     }
 
-    .file {
-        width: 30%;
-        height: 200px;
-        background-color: rgba(220, 220, 220, 0.257);
-        padding-left: 2%;
-        border-radius: 5px;
-    }
-
 }
 
+.file-holder {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
 
 .moment {
     display: flex;
