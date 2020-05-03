@@ -1,1 +1,175 @@
-<p>staff-details works!</p>
+<div class="page-grid sm-top staff-detail-layout">
+    <div class="page-header header">
+        <div id="staff-name-header">
+            <h1 style="margin-right: 1vw;">Dee Calderano</h1>
+            <div id="p-photo"></div>
+            <div id="p-photo"></div>
+            <div id="p-photo"></div>
+            <div id="p-photo"></div>
+        </div>
+        <mat-chip-list>
+            <mat-chip color="accent" selected>Active</mat-chip>
+        </mat-chip-list>
+    </div>
+
+    <mat-card id="staff-details">
+        <div class="staff-info sub-card">
+            <div class="header"><h3>General Info</h3><button mat-button color="primary">Edit</button></div>
+            <span class="overview-holder">
+                <p>Contact Phone</p>
+                <p>(303) 555-0165</p>
+            </span>
+            <span class="overview-holder">
+                <p>Email</p>
+                <p>dee21green@email.com</p>
+            </span>
+            <span class="overview-holder">
+                <p>Birthday</p>
+                <p>3/24/1993</p>
+            </span>
+            <span class="overview-holder">
+                <p>Hired</p>
+                <p>10/04/2017</p>
+            </span>
+        </div>
+        <div class="staff-notes sub-card">
+            <div class="header"><h3>Emergency Contacts</h3><button mat-button color="primary">Edit</button></div>
+            <div class="overview-holder">
+                <div class="contact">
+                    <p>Joseph Calderano <small>(Spouse)</small></p>
+                    <p>(775) 555-0188</p>
+                    <p>jdcal808@email.com</p>
+                </div>
+                <div class="contact">
+                    <p>Eleanor Green <small>(Mother)</small></p>
+                    <p>(775) 555-0132</p>
+                </div>
+            </div>  
+        </div>
+        <div class="sub-card">
+            <div class="notes">
+                <h3>Notes</h3>
+                <p>This is where notes about the staff member would be.</p> 
+            </div>
+        </div> 
+    </mat-card>
+
+    <mat-card id="staff-breakdown">
+        <div class="sub-card">
+            <div class="header"><h3>Payroll</h3><button mat-button color="primary">Edit</button></div>
+            <span class="overview-holder">
+                <p>Rate:</p>
+                <p>$21.00 / hr</p>
+            </span>
+            <span class="overview-holder">
+                <p>Overtime Rate:</p>
+                <p>$31.50 / hr</p>
+            </span>
+            <span class="overview-holder">
+                <p>Typical Weekly Hours:</p>
+                <p>35.00</p>
+            </span>
+            <span class="overview-holder">
+                <p>Paid:</p>
+                <p>Twice a Month</p>
+            </span>
+            <span class="overview-holder">
+                <p>Enrolled in Health Benefits:</p>
+                <p>Yes</p>
+            </span>
+                <span class="sub overview-holder">
+                    <p>Employee Contributon:</p>
+                    <span class="overview-holder line-item">
+                        <p>$</p>
+                        <p>80.00</p>
+                    </span>
+                </span>
+                <span class="sub overview-holder">
+                    <p>Employer Contributon:</p>
+                    <span class="overview-holder line-item">
+                        <p>$</p>
+                        <p>200.00</p>
+                    </span>
+                </span>
+            <span class="overview-holder">
+                <p>Enrolled in 401K:</p>
+                <p>No</p>
+            </span>
+            <span class="overview-holder">
+                <p>Typical Payroll Expense:</p>
+                <p>$1670.00</p>
+            </span>
+                <span class="sub overview-holder">
+                    <p>Regular Salary:</p>
+                    <span class="overview-holder line-item">
+                        <p>$</p>
+                        <p>1470.00</p>
+                    </span>
+                </span>
+                <span class="sub overview-holder">
+                    <p>Overtime Salary:</p>
+                    <span class="overview-holder line-item">
+                        <p>$</p>
+                        <p>0.00</p>
+                    </span>
+                </span>
+                <span class="sub overview-holder">
+                    <p>Employer Healthcare Contributon:</p>
+                    <span class="overview-holder line-item">
+                        <p>$</p>
+                        <p>200.00</p>
+                    </span>
+                </span>
+        </div>
+        <div class="sub-card">
+            <div class="header"><h3>Time Off</h3></div>
+            <span class="overview-holder">
+                <p>Accrued PTO Hours:</p>
+                <p>87.67</p>
+            </span>
+            <span class="sub overview-holder">
+                <p>Most Recent PTO Day:</p>
+                <p>2/23/2020</p>
+            </span>
+            <span class="overview-holder">
+                <p>Accrued Sick Hours:</p>
+                <p>48.00</p>
+            </span>
+            <span class="sub overview-holder">
+                <p>Most Recent Sick Day:</p>
+                <p>7/12/2019</p>
+            </span>
+        </div>
+        <div class="sub-card">    
+            <div class="header"><h3>Recent Paystubs</h3></div>
+                <div class="file-holder">
+                    <div class="file"></div>
+                    <div class="file"></div>
+                    <div class="file"></div>
+                    <div class="file"></div>
+                </div>
+        </div>   
+    </mat-card>
+
+
+    <mat-card id="staff-paperwork">
+        <div class="staff-paperwork sub-card">
+            <div class="header"><h3>Employee Paperwork</h3><button mat-button color="primary">Upload</button></div>
+            <div class="file-holder">
+                <div class="file"></div>
+                <div class="file"></div>
+                <div class="file"></div>
+                <div class="file"></div>
+                <div class="file"></div>
+                <div class="file"></div>
+            </div>
+        </div>
+        <div class="sub-card">
+            <div class="header"><h3>Tax Documents</h3></div>
+                <div class="file-holder">
+                    <div class="file"></div>
+                    <div class="file"></div>
+                </div>
+        </div>
+    </mat-card>
+</div>

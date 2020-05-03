@@ -1,0 +1,102 @@
+@import '../../../styles.scss';
+
+
+mat-panel-title{
+    min-width: 50%;
+}
+
+mat-icon, .subtext {
+    color: mat-color($mat-grey, 600);
+}
+
+h3{
+    margin: unset;
+}
+
+h4{
+    opacity: .6;
+}
+
+.staff-detail-layout {
+    grid-template-areas: 
+        "subhead subhead subhead"
+        "staff-overview payroll paperwork"
+        "staff-overview payroll paperwork"
+        "staff-overview payroll paperwork"
+        "staff-overview payroll paperwork";
+}
+
+.page-header{
+    grid-area: subhead;
+}
+
+.sub {
+    color: mat-color($mat-grey, 600);
+    margin-left: 5%;
+    font-size: 90%;
+
+    p{
+        margin-top: 2px;
+        margin-bottom: 0px;
+    }
+
+    .line-item{
+        min-width: 25%;
+    }
+    
+}
+
+.overview-holder {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+
+    .contact {
+        width: 45%;
+        padding-left: 2%;
+        border-radius: 5px;
+    }
+}
+
+.file-holder {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+#staff-name-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    #p-photo{
+        width: 60px;
+        height: 60px;
+        margin: 0 5px 5px 5px;
+        background-color: mat-color($mat-grey, 100);
+        z-index: 2;
+    }
+}
+
+#staff-details {
+    grid-area: staff-overview;
+    display: flex;
+    flex-direction: column;
+}
+
+#balance-details{
+    grid-area: snapshot-two;
+}
+
+#staff-breakdown{
+    grid-area: payroll;
+}
+
+#staff-paperwork{
+    grid-area: paperwork;
+    display: flex;
+    flex-direction: column;
+}
