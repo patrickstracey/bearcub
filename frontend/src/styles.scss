@@ -32,19 +32,26 @@ html, body { height: 100%; }
 //secondary font? font-family: 'Asap', sans-serif;
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
-h1, h2, h3, h4 {
+h1, h2 {
+    font-family: 'NTR', sans-serif;
     line-height: 25px;
     font-weight: 400;
     margin: 5px;
 }
 
-h1, h2 {
-    font-family: 'NTR', sans-serif;
+h3, h4 {
+    font-weight: 300;
+}
+
+h3 {
+    color: mat-color($frontend-accent, 800);
+    line-height: 33px;
 }
 
 p {
     margin-top: 10px;
     margin-bottom: 10px;
+    font-weight: 200;
 }
 
 mat-icon {
@@ -75,7 +82,23 @@ mat-icon {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
 }
+
+.sub-card {
+    margin-bottom: 20px;
+}
+
+.file {
+    width: 22%;
+    height: 120px;
+    background-color: mat-color($mat-grey, 100);
+    border-radius: 5px;
+    margin-right: 3%;
+    margin-top: 10px;
+}
+
+//CHARTIST STLYES BELOW
 
 .ct-series-a{
     .ct-area{
