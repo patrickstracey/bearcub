@@ -14,6 +14,7 @@ import { StaffOverviewComponent } from './staff/staff-overview/staff-overview.co
 import { RoomOverviewComponent } from './rooms/room-overview/room-overview.component';
 import { StaffDetailsComponent } from './staff/staff-details/staff-details.component';
 import { CheckinOverviewComponent } from './checkins/checkin-overview/checkin-overview.component';
+import { ClassDetailComponent } from './school/class-detail/class-detail.component';
 
 
 const routes: Routes = [
@@ -23,7 +24,8 @@ const routes: Routes = [
   { path: 'family', component: FamilyOverviewComponent },
   { path: 'students/detail', component: StudentDetailComponent },
   { path: 'students', component: StudentOverviewComponent },
-  { path: 'plans', component: GeneratorComponent },  
+  { path: 'plans', component: GeneratorComponent },
+  { path: 'classes/detail', component: ClassDetailComponent },  
   { path: 'classes', component: ClassesComponent },
   { path: 'offerings', component: OfferingsComponent },
   { path: 'staff/detail', component: StaffDetailsComponent },

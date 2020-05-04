@@ -1,0 +1,137 @@
+@import '../../../styles.scss';
+
+
+mat-panel-title{
+    min-width: 50%;
+}
+
+mat-icon, .subtext {
+    color: #757575;
+}
+
+h3{
+    margin: unset;
+}
+
+h4{
+    opacity: .6;
+}
+
+.student-detail-layout {
+    grid-template-areas: 
+        "subhead subhead subhead"
+        "student-overview student-list metrics"
+        "student-overview student-list metrics"
+        "student-overview student-list metrics"
+        "student-overview student-list metrics";
+}
+
+.page-header{
+    grid-area: subhead;
+}
+
+.students{
+    min-height: 180px;
+}
+
+.overview-holder {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    .contact {
+        width: 45%;
+        padding-left: 2%;
+        border-radius: 5px;
+    }
+
+}
+
+.file-holder {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.moment {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.image-gallery {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+
+    .image-item {
+        width: 5vw;
+        height: 5vw;
+        background-color: rgba(220, 220, 220, 0.257);
+        margin: 5px;
+    }
+}
+
+.activity-holder {
+    display: flex;
+    flex-direction: column;
+
+    .activity-item{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        color: grey;
+    }
+}
+
+.link-btn {
+    font-weight: 300;
+    padding: 0px;
+    font-size: 16px;
+}
+
+#student-name-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    #p-photo{
+        width: 60px;
+        height: 60px;
+        margin: 0 5px 5px 5px;
+        background-color: rgb(220, 220, 220);
+        //border-radius: 50%;
+        z-index: 2;
+    }
+}
+
+#student-details {
+    grid-area: student-overview;
+    display: flex;
+    flex-direction: column;
+}
+
+#balance-details{
+    grid-area: snapshot-two;
+}
+
+#student-breakdown{
+    grid-area: student-list;
+}
+
+#metrics{
+    grid-area: metrics;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    
+}
+
+#payment-plans{
+    grid-area: payment;
+}
