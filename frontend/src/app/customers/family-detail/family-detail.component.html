@@ -8,27 +8,29 @@
     
 
     <mat-card id="family-details">
-        <div class="header"><h3>Contact Info</h3><button mat-button color="primary"
-            (click)="openDialog(familyForms.CONTACT)">Add</button></div>
-            <div class="contacts-holder">
-                <div class="contact">
-                    <p>Jennifer Smith <small>(Mother)</small></p>
-                    <p>(775) 555-0132</p>
-                    <p>jenn.smith@gmail.com</p>
-                </div>
-                <div class="contact">
-                    <p>Kevin Smith <small>(Father)</small></p>
-                    <p>(775) 555-0188</p>
-                    <p>ksmith775@gmail.com</p>
-                </div>
+        <div class="sub-card">
+            <div class="header"><h3>Contact Info</h3><button mat-button color="primary"
+                (click)="openDialog(familyForms.CONTACT)">Add</button></div>
+                <div class="contacts-holder">
+                    <div class="contact">
+                        <p>Jennifer Smith <small>(Mother)</small></p>
+                        <p>(775) 555-0132</p>
+                        <p>jenn.smith@gmail.com</p>
+                    </div>
+                    <div class="contact">
+                        <p>Kevin Smith <small>(Father)</small></p>
+                        <p>(775) 555-0188</p>
+                        <p>ksmith775@gmail.com</p>
+                    </div>
             </div> 
-        <div class="Address">
+        </div>     
+        <div class="Address sub-card">
             <div class="header"><h3>Address</h3><button mat-button color="primary"
                 (click)="openDialog(familyForms.ADDRESS)">Add</button></div>
             <p>504 West Wallaby Lane</p>
             <p>Reno, NV 89503</p>
         </div>
-        <div class="payment-methods">
+        <div class="payment-methods sub-card">
             <div class="header"><h3>Payment Methods</h3><button mat-button color="primary"
                 (click)="openDialog(familyForms.PAYMENT)">Add</button></div>
             <div class="payment">
@@ -48,7 +50,7 @@
 
 
     <mat-card id="student-breakdown">
-        <div class="students">
+        <div class="students sub-card">
             <div class="header"><h3>Students</h3> <button mat-button color="primary"
                 (click)="openDialog(familyForms.STUDENT)">Add</button></div>
             <mat-accordion>
@@ -68,10 +70,10 @@
                 </mat-expansion-panel>
             </mat-accordion>
         </div>
-        <div>
+        <div class="sub-card">
             <div class="header"><h3>Pre-paid Check-ins Available: 16</h3></div>
         </div>
-        <div class="activity">
+        <div class="activity sub-card">
             <div class="header"><h3>Recent Activity</h3></div>
             <div class="activity-holder">
                 <span class="activity-item" *ngFor="let activity of activities">
@@ -92,6 +94,7 @@
             <span class="header"><h1>$284.00</h1><p class="subtext"> /per month</p></span>
             <p class="subtext">Auto-processed on the 14th</p>
     </mat-card>
+
     <mat-card id="payment-plans">
         <div>
             <div class="header"><h3>Current Balances</h3></div>
@@ -125,7 +128,5 @@
             
         </div>
     </mat-card>
-
-
 
 </div>

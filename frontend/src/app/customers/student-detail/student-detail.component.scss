@@ -6,7 +6,7 @@ mat-panel-title{
 }
 
 mat-icon, .subtext {
-    color: #757575;
+    color:mat-color($mat-grey, 400);
 }
 
 h3{
@@ -14,7 +14,8 @@ h3{
 }
 
 h4{
-    opacity: .6;
+    color:mat-color($mat-grey, 500);
+    margin: 0px;
 }
 
 .student-detail-layout {
@@ -23,7 +24,7 @@ h4{
         "student-overview contact-block student"
         "student-overview contact-block student"
         "student-overview contact-block student"
-        "student-overview payment student";
+        "student-overview contact-block student";
 }
 
 .page-header{
@@ -75,10 +76,6 @@ h4{
     }
 }
 
-.percentage {
-    color: green;
-    font-size: smaller;
-}
 
 .activity-holder {
     display: flex;
@@ -112,11 +109,6 @@ h4{
     grid-area: student-overview;
     display: flex;
     flex-direction: column;
-
-    div{
-        margin-bottom: 20px;
-    }
-
 }
 
 #balance-details{
@@ -125,10 +117,6 @@ h4{
 
 #student-breakdown{
     grid-area: student;
-
-    div{
-        margin-bottom: 20px;
-    }
 }
 
 #student-notes{
@@ -136,14 +124,4 @@ h4{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-
-    
-}
-
-#payment-plans{
-    grid-area: payment;
-
-    div{
-        margin-bottom: 20px;
-    }
 }
