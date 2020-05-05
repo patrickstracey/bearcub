@@ -89,11 +89,20 @@ mat-icon {
     margin-bottom: 20px;
 }
 
-.link-btn {
-    font-weight: 300;
+a {
     padding: 0px;
-    font-size: 16px;
+
+    &.regular {
+        font-weight: 300;
+        font-size: 16px;
+    }
+
+    &.table {
+        font-size: 14px;
+        font-weight: 400;
+    }
 }
+
 
 .file {
     width: 22%;
