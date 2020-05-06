@@ -59,6 +59,20 @@ mat-icon {
     margin-right: 5px;
 }
 
+
+//for table styling of links and buttons. Mat-primary is used for linking on something
+//other that a 'details' link.
+td {   
+    button, a.mat-accent {
+        float: right;
+        margin-left: 15px !important;
+    }
+
+    a.mat-primary {
+        padding: 0px;
+    }
+}
+
 .page-grid{
     display: grid;
     height: 100%;
