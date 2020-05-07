@@ -17,6 +17,13 @@ h4{
     opacity: .6;
 }
 
+img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
 .staff-detail-layout {
     grid-template-areas: 
         "subhead subhead subhead"
@@ -73,10 +80,9 @@ h4{
     justify-content: space-between;
 
     #p-photo{
-        width: 60px;
-        height: 60px;
+        width: 70px;
+        height: 70px;
         margin: 0 5px 5px 5px;
-        background-color: mat-color($mat-grey, 100);
         z-index: 2;
     }
 }
