@@ -18,6 +18,13 @@ h4{
     margin: 0px;
 }
 
+img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
 .student-detail-layout {
     grid-template-areas: 
         "subhead subhead subhead"
@@ -69,9 +76,8 @@ h4{
     justify-content: flex-start;
 
     .image-item {
-        width: 5vw;
-        height: 5vw;
-        background-color: rgba(220, 220, 220, 0.257);
+        width: 8vw;
+        height: 8vw;
         margin: 5px;
     }
 }
@@ -96,11 +102,9 @@ h4{
     justify-content: space-between;
 
     #p-photo{
-        width: 60px;
-        height: 60px;
+        width: 70px;
+        height: 70px;
         margin: 0 5px 5px 5px;
-        background-color: rgb(220, 220, 220);
-        //border-radius: 50%;
         z-index: 2;
     }
 }
