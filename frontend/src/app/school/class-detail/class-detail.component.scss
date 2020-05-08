@@ -24,6 +24,10 @@ img{
     border-radius: 5px;
 }
 
+mat-icon {
+    color:mat-color($frontend-accent, 200);
+}
+
 .student-detail-layout {
     grid-template-areas: 
         "subhead subhead subhead"
@@ -75,8 +79,8 @@ img{
     justify-content: flex-start;
 
     .image-item {
-        width: 8vw;
-        height: 8vw;
+        width: 6vw;
+        height: 6vw;
         margin: 5px;
     }
 }
@@ -125,4 +129,8 @@ img{
 
 #payment-plans{
     grid-area: payment;
+}
+
+#studentTable {
+    width: 100%;
 }
