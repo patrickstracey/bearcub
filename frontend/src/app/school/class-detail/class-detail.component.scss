@@ -6,7 +6,7 @@ mat-panel-title{
 }
 
 mat-icon, .subtext {
-    color: #757575;
+    color: mat-color($mat-grey, 400);
 }
 
 h3{
@@ -24,10 +24,6 @@ img{
     border-radius: 5px;
 }
 
-mat-icon {
-    color:mat-color($frontend-accent, 200);
-}
-
 .student-detail-layout {
     grid-template-areas: 
         "subhead subhead subhead"
@@ -43,6 +39,26 @@ mat-icon {
 
 .students{
     min-height: 180px;
+}
+
+.student-panel {
+    border-bottom: solid 1px;
+    border-color: mat-color($mat-grey, 300);
+    font-size: 14px;
+
+    .student-row{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .daily-notes{
+        display: inline-flex;
+
+        p {
+            margin: 4px;
+        }
+    }
 }
 
 .overview-holder {
@@ -93,7 +109,7 @@ mat-icon {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        color: grey;
+        color: mat-color($mat-grey, 400);
     }
 }
 
@@ -131,6 +147,6 @@ mat-icon {
     grid-area: payment;
 }
 
-#studentTable {
+#student-table {
     width: 100%;
 }
