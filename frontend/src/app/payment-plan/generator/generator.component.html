@@ -24,7 +24,7 @@
         <h2 style="margin-bottom: 15px;" class="header">Projections <button mat-flat-button color="primary">Add Plan</button></h2>
         <div class="holder">
             <div class=item>
-                <p class="subtext">Revenue Owed</p>
+                <p class="subtext">Base Owed</p>
                 <h3>{{projection.owedUpfront | currency:'USD'}}</h3>
             </div>
             <div class=item>
@@ -76,7 +76,7 @@
         </div>
         
         <div class="mapper">
-            <h2 class="header">Projection Mapper<button mat-button color="accent" (click)="calculateProjections()">Calculate</button></h2>
+            <h2 class="header">Projection Mapper<button  mat-stroked-button color="accent" (click)="calculateProjections()">Calculate</button></h2>
             <div class="projection-form">
                 <mat-form-field>
                     <mat-label>Service Used</mat-label>
