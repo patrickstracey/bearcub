@@ -6,7 +6,7 @@ mat-panel-title{
 }
 
 mat-icon, .subtext {
-    color:mat-color($mat-grey, 400);
+    color: mat-color($mat-grey, 400);
 }
 
 h3{
@@ -14,8 +14,7 @@ h3{
 }
 
 h4{
-    color:mat-color($mat-grey, 500);
-    margin: 0px;
+    opacity: .6;
 }
 
 img{
@@ -28,10 +27,10 @@ img{
 .student-detail-layout {
     grid-template-areas: 
         "subhead subhead subhead"
-        "student-overview contact-block student"
-        "student-overview contact-block student"
-        "student-overview contact-block student"
-        "student-overview contact-block student";
+        "student-overview student-list metrics"
+        "student-overview student-list metrics"
+        "student-overview student-list metrics"
+        "student-overview student-list metrics";
 }
 
 .page-header{
@@ -40,6 +39,26 @@ img{
 
 .students{
     min-height: 180px;
+}
+
+.student-panel {
+    border-bottom: solid 1px;
+    border-color: mat-color($mat-grey, 300);
+    font-size: 14px;
+
+    .student-row{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .daily-notes{
+        display: inline-flex;
+
+        p {
+            margin: 4px;
+        }
+    }
 }
 
 .overview-holder {
@@ -76,12 +95,11 @@ img{
     justify-content: flex-start;
 
     .image-item {
-        width: 8vw;
-        height: 8vw;
+        width: 6vw;
+        height: 6vw;
         margin: 5px;
     }
 }
-
 
 .activity-holder {
     display: flex;
@@ -91,22 +109,15 @@ img{
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        color: grey;
+        color: mat-color($mat-grey, 400);
     }
 }
 
-#student-name-header {
+#classroom-name-header {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-
-    #p-photo{
-        width: 70px;
-        height: 70px;
-        margin: 0 5px 5px 5px;
-        z-index: 2;
-    }
 }
 
 #student-details {
@@ -120,12 +131,22 @@ img{
 }
 
 #student-breakdown{
-    grid-area: student;
+    grid-area: student-list;
 }
 
-#student-notes{
-    grid-area: contact-block;
+#metrics{
+    grid-area: metrics;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+
+    
+}
+
+#payment-plans{
+    grid-area: payment;
+}
+
+#student-table {
+    width: 100%;
 }

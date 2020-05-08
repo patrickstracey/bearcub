@@ -6,7 +6,7 @@ mat-panel-title{
 }
 
 mat-icon, .subtext {
-    color: #757575;
+    color: mat-color($mat-grey, 600);
 }
 
 h3{
@@ -80,10 +80,6 @@ h3{
     grid-area: fam-overview;
     display: flex;
     flex-direction: column;
-
-    div{
-        margin-bottom: 20px;
-    }
 }
 
 #balance-details{
@@ -92,18 +88,10 @@ h3{
 
 #student-breakdown{
     grid-area: student;
-
-    div{
-        margin-bottom: 20px;
-    }
 }
 
 #revenue-graph{
     grid-area: snapshot-three;
-
-    div{
-        margin-bottom: 20px;
-    }
 
     p{
         margin: 10px 0 0 0;
@@ -112,8 +100,4 @@ h3{
 
 #payment-plans{
     grid-area: payment;
-
-    div{
-        margin-bottom: 20px;
-    }
 }

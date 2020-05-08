@@ -25,6 +25,7 @@ import { StaffOverviewComponent } from './staff/staff-overview/staff-overview.co
 import { RoomOverviewComponent } from './rooms/room-overview/room-overview.component';
 import { StaffDetailsComponent } from './staff/staff-details/staff-details.component';
 import { CheckinOverviewComponent } from './checkins/checkin-overview/checkin-overview.component';
+import { ClassDetailComponent } from './school/class-detail/class-detail.component';
 
 @NgModule({
   declarations: [
@@ -46,7 +47,8 @@ import { CheckinOverviewComponent } from './checkins/checkin-overview/checkin-ov
     StaffOverviewComponent,
     RoomOverviewComponent,
     StaffDetailsComponent,
-    CheckinOverviewComponent
+    CheckinOverviewComponent,
+    ClassDetailComponent
   ],
   imports: [
     BrowserModule,

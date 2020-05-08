@@ -13,6 +13,13 @@ export interface FamilyData {
     enrollment_date: Date;
   }
 
+export interface StudentData {
+  last_name: string;
+  first_name: string;
+  classroom: string;
+  dob: Date;
+}
+
 export interface StaffData {
   last_name: string;
   first_name: string;
@@ -92,6 +99,19 @@ export class MockNameGeneratorService {
         hire_date: hired
       }
     }
+
+    createNewStudent(id: number): StudentData {
+      const first_name = NAMES[Math.round(Math.random() * (NAMES.length - 1))];
+      const last_name = NAMES[Math.round(Math.random() * (NAMES.length - 1))];
+      const dob = new Date('10/15/2016');
+    
+      return {
+        last_name: first_name,
+        first_name: last_name,
+        classroom: "Sunshine",
+        dob: dob
+        }
+      };
 
     createNewRooms(): RoomData[] {
 

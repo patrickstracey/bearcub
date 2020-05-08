@@ -19,7 +19,7 @@
             <!-- Student Name -->
             <ng-container matColumnDef="student_name">
             <th mat-header-cell *matHeaderCellDef mat-sort-header> Student </th>
-            <td mat-cell *matCellDef="let row"><a href="/students/detail" mat-button color="primary">{{row.student_name}}</a></td>
+            <td mat-cell *matCellDef="let row"><a [routerLink]="['/students/detail']" mat-button color="primary" class="table">{{row.student_name}}</a></td>
             </ng-container>
         
             <!-- Check-in Person (normally parent or staff) Column -->

@@ -58,8 +58,8 @@
             <!-- Detail Button Column -->
             <ng-container matColumnDef="details">
                 <th mat-header-cell *matHeaderCellDef> </th>
-                <td mat-cell *matCellDef="let row"> <button mat-button color="accent" style="right:-7vw" 
-                    [routerLink]="['/family/detail']">Details</button> </td>
+                <td mat-cell *matCellDef="let row"> <a mat-button color="accent" 
+                    [routerLink]="['/family/detail']" class="table">Details</a> </td>
             </ng-container>
         
             <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>

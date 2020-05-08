@@ -1,0 +1,72 @@
+<div class="page-grid sm-top student-detail-layout">
+    <div class="page-header header">
+        <div id="classroom-name-header">
+            <h1 style="margin-right: 1vw;">Sunshine Class</h1>
+        </div>
+    </div>
+
+    <mat-card id="student-details">
+        <div class="student-info sub-card">
+            <div class="header"><h3>Class Info</h3><button mat-stroked-button color="primary">Edit</button></div>
+            <span class="overview-holder" style="margin-top: 15px;">
+                <p>Teacher</p>
+                <a [routerLink]="['/staff/detail']" mat-button color="primary" class="regular">Dee Calderano</a>
+            </span>
+            <span class="overview-holder">
+                <p>Classroom</p>
+                <p>Sunshine Room</p>
+            </span>
+            <span class="overview-holder">
+                <p>Student Count</p>
+                <p>17</p>
+            </span>
+            <span class="overview-holder">
+                <p>Date Created</p>
+                <p>1/10/2020</p>
+            </span>
+        </div>
+        <div class="notes sub-card">
+            <div class="header"><h3>Notes</h3><button mat-stroked-button color="primary">Edit</button></div>
+            <p>This is where a note about a class might live.</p> 
+        </div>
+        <div class="sub-card">
+            <div class="header"><h3>Image Gallery</h3></div>
+            <div class="image-gallery">
+                <div class="image-item" *ngFor="let photo of photos">
+                    <img src={{photo}}>
+                </div>
+            </div>
+        </div>
+    </mat-card>
+
+    <mat-card id="student-breakdown">
+        <div class="activity sub-card">
+            <div class="header"><h3>Current Students</h3></div>
+            <div class="student-panel" *ngFor="let student of users">
+                <div class="student-row">
+                    <span style="width: 40%;">
+                        <a [routerLink]="['/students/detail']" mat-button color="primary" class="table">{{student.first_name + ' ' + student.last_name}}</a>
+                    </span>
+                    <p>Checked-in: Full Day</p>
+                </div>
+                <span *ngIf="student.first_name === 'Elton'"class="daily-notes">
+                    <mat-icon>event</mat-icon><p>These are some notes about this student These are some notes about this studentThese are some notes about this studentThese are some notes about this student</p>
+                </span>
+            </div>
+        </div>
+    </mat-card>
+
+
+    <mat-card id="metrics">
+        <div class="activity sub-card">
+            <div class="header"><h3>Metrics</h3></div>
+            <div class="activity-holder">
+                <span class="activity-item" *ngFor="let activity of activities">
+                    <p>{{activity.event}}</p>
+                    <p>{{activity.date | date:'short'}}</p>
+                </span>
+            </div>
+        </div>
+    </mat-card>
+
+</div>

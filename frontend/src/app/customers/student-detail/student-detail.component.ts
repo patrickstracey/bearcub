@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { PhotoMocksService } from 'src/app/_services_mock_data/photo-mocks.service';
 
 @Component({
   selector: 'app-student-detail',
@@ -33,9 +34,14 @@ export class StudentDetailComponent implements OnInit {
       date: new Date()
     }];
 
-  constructor() { }
+    photos: string[];
+
+  constructor(
+    private _mockPhotoServie: PhotoMocksService
+  ) {}
 
   ngOnInit() {
+    this.photos = this._mockPhotoServie.getPhotos('student');
   }
 
 }
