@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class OfferingsComponent implements OnInit {
 
-  private offerings = [
+  offerings = [
     {
       name:'5 Full Days [36 months - Pre-K]',
       tuition:'163.00',
