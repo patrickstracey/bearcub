@@ -1,0 +1,19 @@
+@import '../../../styles.scss';
+
+.keys {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    span {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+}
+
+.color-swatch {
+    height: 15px;
+    width: 15px; 
+    margin-right: 8px;
+}

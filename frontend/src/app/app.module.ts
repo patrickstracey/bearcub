@@ -26,6 +26,7 @@ import { RoomOverviewComponent } from './rooms/room-overview/room-overview.compo
 import { StaffDetailsComponent } from './staff/staff-details/staff-details.component';
 import { CheckinOverviewComponent } from './checkins/checkin-overview/checkin-overview.component';
 import { ClassDetailComponent } from './school/class-detail/class-detail.component';
+import { GaugeChartComponent } from './shared/gauge-chart/gauge-chart.component';
 
 @NgModule({
   declarations: [
@@ -48,7 +49,8 @@ import { ClassDetailComponent } from './school/class-detail/class-detail.compone
     RoomOverviewComponent,
     StaffDetailsComponent,
     CheckinOverviewComponent,
-    ClassDetailComponent
+    ClassDetailComponent,
+    GaugeChartComponent
   ],
   imports: [
     BrowserModule,
