@@ -41,7 +41,7 @@
 
     <mat-card id="student-breakdown">
         <div class="activity sub-card">
-            <div class="header"><h3>Current Students</h3></div>
+            <div class="header"><h3>Today's Students</h3></div>
             <div class="student-panel" *ngFor="let student of users">
                 <div class="student-row">
                     <span style="width: 40%;">
@@ -65,6 +65,11 @@
                     <p>{{activity.event}}</p>
                     <p>{{activity.date | date:'short'}}</p>
                 </span> -->
+            </div>
+            <div style="height: 200px;">
+                <app-gauge-chart 
+                    [displayLabels]="['Full-Day', 'Half-Day']" [dataSet]="studentCounts">
+                </app-gauge-chart>
             </div>
         </div>
     </mat-card>
