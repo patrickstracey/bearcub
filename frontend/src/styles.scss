@@ -114,6 +114,7 @@ a {
     &.table {
         font-size: 14px;
         font-weight: 400;
+        text-align: left;
     }
 }
 
@@ -127,22 +128,3 @@ a {
     margin-top: 10px;
 }
 
-//CHARTIST STLYES BELOW
-
-.ct-series-a{
-    .ct-area{
-        fill:mat-color($mat-grey, 600);
-    }
-    .ct-line, .ct-point{
-        stroke:mat-color($mat-grey, 200);
-    }  
-} 
-
-.ct-series-b{
-    .ct-area{
-        fill:mat-color($frontend-primary, 600);
-    }
-    .ct-line, .ct-point{
-        stroke:mat-color($frontend-primary, 600);
-    }  
-} 

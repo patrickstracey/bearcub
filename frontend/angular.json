@@ -29,7 +29,8 @@
             ],
             "styles": [
               "node_modules/chartist/dist/chartist.css",
-              "src/styles.scss"
+              "src/styles.scss",
+              "src/styles-chartist-overrides.scss"
             ],
             "scripts": []
           },

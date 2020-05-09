@@ -1,0 +1,70 @@
+@import 'styles.scss';
+
+//Line Chart 
+.ct-series-a{
+    .ct-area{
+        fill:mat-color($mat-grey, 600);
+    }
+    .ct-line, .ct-point{
+        stroke:mat-color($mat-grey, 200);
+    }  
+} 
+
+.ct-series-b{
+    .ct-area{
+        fill:mat-color($frontend-primary, 600);
+    }
+    .ct-line, .ct-point{
+        stroke:mat-color($frontend-primary, 600);
+    }  
+}
+
+//Donut Chart
+.ct-chart-donut {
+    .ct-label{
+        font-size: 21px;
+        font-weight: 200;
+    }
+}
+
+
+//Standard Color Setup
+//nice green  #62e0a1;
+
+$a-color: mat-color($frontend-primary, 300);
+$b-color: mat-color($frontend-accent, 200);
+$c-color: mat-color($frontend-primary, 200);
+$d-color: mat-color($frontend-accent, 100);
+
+.ct-series-a {
+    background-color: $a-color;
+
+    .ct-slice-donut{
+        stroke: $a-color;
+    }
+}
+
+
+.ct-series-b {
+    background-color: $b-color;
+
+    .ct-slice-donut{
+        stroke: $b-color;
+    }
+}
+
+.ct-series-c {
+    background-color: $c-color;
+
+    .ct-slice-donut{
+        stroke: $c-color;
+    }
+}
+
+.ct-series-d {
+    background-color: $d-color;
+    
+    .ct-slice-donut{
+        stroke: $d-color;
+    }
+}
