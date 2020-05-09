@@ -31,19 +31,5 @@ export class GaugeChartComponent {
     showLabel: false
   };
 
-  events: ChartEvent = {
-    draw: (data) => {
-      if (data.type === 'pie') {
-        data.element.animate({
-          y2: <IChartistAnimationOptions>{
-            dur: '0.5s',
-            from: data.y1,
-            to: data.y2,
-            easing: 'easeOutQuad'
-          }
-        });
-      }
-    }
-  };
 
 }
