@@ -66,9 +66,14 @@
                     <p>{{activity.date | date:'short'}}</p>
                 </span> -->
             </div>
-            <div style="height: 200px;">
+            <div style="height: 200px; margin-bottom: 50px;">
                 <app-gauge-chart 
                     [displayLabels]="['Full-Day', 'Half-Day']" [dataSet]="studentCounts">
+                </app-gauge-chart>
+            </div>
+            <div style="height: 200px; margin-bottom: 50px;">
+                <app-gauge-chart 
+                    [displayLabels]="['Full-Day', 'Half-Day', 'After School']" [dataSet]="[33, 58, 9]">
                 </app-gauge-chart>
             </div>
         </div>
