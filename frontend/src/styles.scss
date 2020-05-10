@@ -2,6 +2,7 @@
 // Custom Theming for Angular Material
 // For more information: https://material.angular.io/guide/theming
 @import '~@angular/material/theming';
+@import 'styles-custom-colors.scss';
 
 // Plus imports for other components in your app.
 
@@ -11,8 +12,10 @@
 @include mat-core();
 
 //find existing colors in ./frontend/node_modules/@angular/material/_theming.scss
-$frontend-primary: mat-palette($mat-cyan);
-$frontend-accent: mat-palette($mat-purple);
+//$frontend-primary: mat-palette($mat-cyan);
+//$frontend-accent: mat-palette($mat-purple);
+$frontend-accent: mat-palette($mat-cyan);
+$frontend-primary: mat-palette($mat-aquamarine);
 
 // The warn palette is optional (defaults to red).
 $frontend-warn: mat-palette($mat-red);
@@ -40,11 +43,11 @@ h1, h2 {
 }
 
 h3, h4 {
-    font-weight: 300;
+    font-weight: 400;
 }
 
 h3 {
-    color: mat-color($frontend-accent, 800);
+    color: mat-color($frontend-accent, 600);
     line-height: 33px;
 }
 
@@ -114,6 +117,7 @@ a {
     &.table {
         font-size: 14px;
         font-weight: 400;
+        text-align: left;
     }
 }
 
@@ -127,22 +131,3 @@ a {
     margin-top: 10px;
 }
 
-//CHARTIST STLYES BELOW
-
-.ct-series-a{
-    .ct-area{
-        fill:mat-color($mat-grey, 600);
-    }
-    .ct-line, .ct-point{
-        stroke:mat-color($mat-grey, 200);
-    }  
-} 
-
-.ct-series-b{
-    .ct-area{
-        fill:mat-color($frontend-primary, 600);
-    }
-    .ct-line, .ct-point{
-        stroke:mat-color($frontend-primary, 600);
-    }  
-} 

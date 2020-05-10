@@ -41,7 +41,7 @@
 
     <mat-card id="student-breakdown">
         <div class="activity sub-card">
-            <div class="header"><h3>Current Students</h3></div>
+            <div class="header"><h3>Today's Students</h3></div>
             <div class="student-panel" *ngFor="let student of users">
                 <div class="student-row">
                     <span style="width: 40%;">
@@ -59,12 +59,22 @@
 
     <mat-card id="metrics">
         <div class="activity sub-card">
-            <div class="header"><h3>Metrics</h3></div>
+            <div class="header"><h3>Today's Metrics</h3></div>
             <div class="activity-holder">
-                <span class="activity-item" *ngFor="let activity of activities">
+                <!-- <span class="activity-item" *ngFor="let activity of activities">
                     <p>{{activity.event}}</p>
                     <p>{{activity.date | date:'short'}}</p>
-                </span>
+                </span> -->
+            </div>
+            <div style="height: 200px; margin-bottom: 50px;">
+                <app-gauge-chart 
+                    [displayLabels]="['Full-Day', 'Half-Day']" [dataSet]="studentCounts">
+                </app-gauge-chart>
+            </div>
+            <div style="height: 200px; margin-bottom: 50px;">
+                <app-gauge-chart 
+                    [displayLabels]="['Full-Day', 'Half-Day', 'After School']" [dataSet]="[33, 58, 9]">
+                </app-gauge-chart>
             </div>
         </div>
     </mat-card>

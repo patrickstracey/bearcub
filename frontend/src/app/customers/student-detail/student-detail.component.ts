@@ -8,7 +8,7 @@ import { PhotoMocksService } from 'src/app/_services_mock_data/photo-mocks.servi
 })
 export class StudentDetailComponent implements OnInit {
 
-  private activities = [
+  activities = [
     {
       event: "Samantha 1st enrollment",
       date: new Date()

@@ -13,6 +13,7 @@ export class ClassDetailComponent implements OnInit {
   displayedStudentColumns: string[] = ['name', 'birthday', 'status'];
   photos: string[];
   users: StudentData[];
+  studentCounts: number[] = [74, 26];
 
   constructor(
     private _mockPhotoService: PhotoMocksService,

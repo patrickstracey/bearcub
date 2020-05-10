@@ -1,0 +1,23 @@
+@import '../../../styles.scss';
+
+.keys {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 14px;
+    flex-wrap: wrap;
+
+    span {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+}
+
+.color-swatch {
+    height: 15px;
+    width: 15px; 
+    margin-right: 8px;
+}

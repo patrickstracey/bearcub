@@ -1,0 +1,12 @@
+<div class="keys">
+  <span *ngFor="let label of displayLabels; index as i">
+    <div class="color-swatch" [ngClass]="styleLabels[i]"></div><p>{{label}} ({{dataSet[i]}})</p>
+  </span>
+</div>
+<x-chartist
+      [type]="type"
+      [data]="data"
+      [options]="options"
+      style="width: 100%; height: 140%;"
+    >
+</x-chartist>

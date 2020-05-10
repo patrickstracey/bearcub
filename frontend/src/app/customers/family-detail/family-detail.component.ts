@@ -14,7 +14,7 @@ import { FamilyDetailForms } from './family-detail.forms'
 export class FamilyDetailComponent implements OnInit {
 
   familyForms = FamilyDetailForms;
-  private students = [
+  students = [
     {
       name: 'Geoff',
       age: 4,
@@ -29,7 +29,7 @@ export class FamilyDetailComponent implements OnInit {
     },
   ]
 
-  private activities = [
+  activities = [
     {
       event: "Samantha 1st enrollment",
       date: new Date()
