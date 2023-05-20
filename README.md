@@ -7,9 +7,9 @@ I like starting projects with the front-end because I find that it quickly uncov
 
 [You can learn more about this project and the decisions I made on my website here](https://stracey.dev/projects/bearcub).
 
-The end user needs for this project were pretty simple and so the intention was to keep the project small enough so that it could be built in 1-2 weekends and allow me to tinker with some frameworks / technologies that I hadn't had the chance to use much yet.
+I have an interest in using technology to help people build sustainable businesses that also benefit their communities and so the early notion of wanting to eplore a financial offering for daycare came from looking at the high cost of childcare in the United States.
 
-Additionally since the project is mostly just reptitive tables, I wanted to see just how small I could keep the component by having tables dynamically generate there columns and contents based on the model being returned by the API.
+Despite the high costs to families, facilities themselves are under serious financial strain due to market and regulatory forces that ultimately result in them subsidizing their services through low teacher salaries that make up the bulk of their operating expenses (Averaging $32,000 per employee in California and _just_ $18,200 in Mississippi) with lackluster (if any) benefits. This results in families of childcare workers in the United States being twice as likely to live in poverty (11.8%) than working families in other industries (5.8%) creating a situation where childcare providers are both underpaid and providing a service their clients cannot afford.
 
 ### Sample Screenshot
 
